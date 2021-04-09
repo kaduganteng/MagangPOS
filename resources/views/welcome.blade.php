@@ -87,14 +87,9 @@
 
             <h1>JL.Banda NO.30</h1>
 
-            <div class="links">
 
-
-                <a href="manu">Menu Inventory </a>
-                <a href="https://blog.laravel.com">Blog</a>
-
-            </div>
         </div>
+    </div>
     </div>
 </body>
 
