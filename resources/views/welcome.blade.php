@@ -85,7 +85,7 @@
         <div class="content">
             <img src="{{asset('image/pos.png')}}" style="height: 350px; width :auto">
 
-            <h1>JL.Banda NO.30</h1>
+            <h1>JL.Banda NO.30 </h1>
 
 
         </div>
