@@ -18050,7 +18050,7 @@ body.text-sm .control-sidebar {
 .navbar-orange.navbar-light .form-control-navbar + .input-group-append > .btn-navbar {
   background-color: #fa7302;
   border-color: #e16702;
-  color: rgba(52, 58, 64, 0.8);
+  color: rgba(52, 58, 64, 0.  8);
 }
 
 .navbar-orange.navbar-light .form-control-navbar:focus::-webkit-input-placeholder {

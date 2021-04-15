@@ -28,6 +28,7 @@ Route::get('/welcome', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
-Route::get('/inventory','InventoryController@index')->name('inventory');
-Route::get('/pengembalian_barang','PengembalianBarangController@index')->name('PengembalianBarang');
-Route::get('/pemasukan_barang','PemasukanBarangController@index')->name('PemasukanBarang');
+Route::get('/inventory', 'InventoryController@index')->name('inventory');
+Route::get('/pengembalian_barang', 'PengembalianBarangController@index')->name('PengembalianBarang');
+Route::get('/pemasukan_barang', 'PemasukanBarangController@index')->name('PemasukanBarang');
+Route::get('/kategoriInventory', 'KategoriInventoryController@index')->name('kategori_inventory');
