@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreatePemasukanBarangTable extends Migration
+class AddRoleIdToUsersTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,12 +13,8 @@ class CreatePemasukanBarangTable extends Migration
      */
     public function up()
     {
-        Schema::create('pemasukan_barang', function (Blueprint $table) {
-            $table->id();
-            $table->string('nip');
-            $table->string('nama_pegawai');
-            $table->string('barang');
-            $table->timestamps();
+        Schema::table('users', function (Blueprint $table) {
+            $table->integer('role_id')->after('remember_token');
         });
     }
 
@@ -29,6 +25,8 @@ class CreatePemasukanBarangTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('pemasukan_barang');
+        Schema::table('users', function (Blueprint $table) {
+            //
+        });
     }
 }
