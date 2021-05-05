@@ -16,40 +16,39 @@
     </div>
     <!-- /.card-header -->
     <!-- form start -->
-    <form action="{{route('inventory.store')}}" method="post">
+    <form action="{{route('pemasangan.store')}}" method="post">
         @csrf
+
+
         <div class="card-body">
             <div class="form-group">
-                <label for="exampleInputEmail1">Kategori</label>
-                <select name="kategori_id">
-                    @foreach($kategori as $k)
-                    <option value="{{$k->id}}">{{$k->nama_kategori}}</option>
+                <label for="exampleInputEmail1">ID Barang</label>
+                <select name="idbarang">
+                    @foreach($pemasangan as $p)
+                    <option value="{{$p ->id}}">{{$p->nama}}</option>
                     @endforeach
                 </select>
             </div>
             <div class="form-group">
-                <label for="exampleInputEmail1">Nama Barang</label>
-                <input type="text" class="form-control" name="nama_barang" id="nama_barang" placeholder="Masukan Nama Barang">
+                <label for="exampleInputFile">Tanggal Pemasangan</label>
+                <input type="date" class="form-control" name="tanggalpasang" id="tanggalpasang">
+
             </div>
             <div class="form-group">
-                <label for="exampleInputPassword1">Nomor Serial</label>
-                <input type="text" class="form-control" name="sn" id="sn" placeholder="Masukan Nomor Serial ">
+                <label for="exampleInputEmail1">Ruangan</label>
+                <input type="text" class="form-control" name="ruangan" id="ruangan" placeholder="Masukan Nama Ruangan">
+            </div>
+            <div class="form-group">
+                <label for="exampleInputPassword1">Alamat</label>
+                <input type="text" class="form-control" name="alamat" id="almat" placeholder="Masukan Alamat Pemasangan ">
             </div>
 
             <div class="form-group">
-                <label for="exampleInputPassword1">Merk</label>
-                <input type="text" class="form-control" name="merk" id="merk" placeholder="Masukan Merk ">
-            </div>
-            <div class="form-group">
-                <label for="exampleInputPassword1">Kelengkapan</label>
-                <input type="text" class="form-control" name="kelengkapan" id="kelengkapan" placeholder="Masukan Kelengkapan ">
+                <label for="exampleInputPassword1">Status WebCam</label>
+                <input type="text" class="form-control" name="status" id="status" placeholder="Masukan Status WebCam ">
             </div>
 
-            <div class="form-group">
-                <label for="exampleInputFile">Tanggal Masuk</label>
-                <input type="date" class="form-control" name="tanggal_masuk" id="tanggal_masuk">
 
-            </div>
 
         </div>
         <!-- /.card-body -->

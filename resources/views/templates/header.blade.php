@@ -136,7 +136,7 @@
             <!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->
             <li class="nav-item">
-              <a href="#" class="nav-link">
+              <a href="{{route('home')}}" class="nav-link">
                 <i class="nav-icon fas fa-tachometer-alt"></i>
                 <p>
                   Dashboard
@@ -160,18 +160,26 @@
               </a>
             </li>
             <li class="nav-item">
-              <a href="{{route('PemasukanBarang')}}" class="nav-link">
+              <a href="{{route('peminjaman.store')}}" class="nav-link">
                 <i class="nav-icon fas fa-tachometer-alt"></i>
                 <p>
-                  Pemasukan Barang
+                  Data Peminjaman
                 </p>
               </a>
             </li>
             <li class="nav-item">
-              <a href="{{route('PengembalianBarang')}}" class="nav-link">
+              <a href="{{route('PengembalianBarang.store')}}" class="nav-link">
                 <i class="nav-icon far fa-image"></i>
                 <p>
                   Pengembalian Barang
+                </p>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="{{route('pemasangan.store')}}" class="nav-link">
+                <i class="nav-icon far fa-image"></i>
+                <p>
+                  Pemasangan WebCam
                 </p>
               </a>
             </li>

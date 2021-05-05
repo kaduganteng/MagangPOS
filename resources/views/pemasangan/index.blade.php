@@ -24,8 +24,8 @@
     <!-- Default box -->
     <div class="card">
         <div class="card-header">
-            <a href="{{route('kategori.create')}}">
-                <button class="btn btn-primary">Input Kategori</button>
+            <a href="{{route('pemasangan.create')}}">
+                <button class="btn btn-primary">Mau Masang yaa,Klik sini</button>
 
             </a>
         </div>
@@ -34,8 +34,12 @@
             <table id="example1" class="table table-bordered table-striped">
                 <thead>
                     <tr>
-                        <td>no</td>
-                        <td>nama kategori</td>
+                        <td>No</td>
+                        <td>Id Barang</td>
+                        <td>Tanggal Pemasangan</td>
+                        <td>Ruangan</td>
+                        <td>Alamat</td>
+                        <td>Status WebCam</td>
                     </tr>
                 </thead>
                 <tbody>
@@ -43,10 +47,14 @@
                     @php
                     $no = 1;
                     @endphp
-                    @foreach($kategori as $k )
+                    @foreach($inv as $p )
                     <tr>
                         <td>{{$no++}}</td>
-                        <td>{{$k->nama_kategori}}</td>
+                        <td>{{$p->inv_id}}</td>
+                        <td>{{$p->tgl_pemasangan}}</td>
+                        <td>{{$p->ruangan}}</td>
+                        <td>{{$p->alamat}}</td>
+                        <td>{{$p->status}}</td>
                     </tr>
                     @endforeach
                 </tbody>

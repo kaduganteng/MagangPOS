@@ -11,9 +11,12 @@ class InventoryController extends Controller
 {
     public function index()
     {
-        $inv = DB::table('inventory')->select('*')->get();
-
-        return view('inventory/index');
+        $inv = Inventory::select('inventory.*', 'kategori_inventory.nama_kategori')
+            ->join('kategori_inventory', 'kategori_inventory.id', '=', 'inventory.kategori_id')
+            ->get();
+        return view('inventory.index', [
+            'inv' => $inv
+        ]);
     }
     public function create()
     {
@@ -26,8 +29,10 @@ class InventoryController extends Controller
     {
         $inv = Inventory::create([
             'nama' => $request->nama_barang,
-            'kode' => $request->kode_barang,
-            'tanggal_masuk' => $request->tanggal_masuk,
+            'sn' => $request->sn,
+            'merk' => $request->merk,
+            'kelengkapan' => $request->kelengkapan,
+            'tgl_masuk' => $request->tanggal_masuk,
             'kategori_id' => $request->kategori_id
         ]);
 

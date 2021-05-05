@@ -14,4 +14,18 @@ class KategoriInventoryController extends Controller
             'kategori' => $kategori
         ]);
     }
+    public function create()
+    {
+
+        return view('kategori_inventory.form');
+    }
+    public function store(Request $request)
+    {
+        $inv = KategoriInventory::create([
+            'nama_kategori' => $request->kategori,
+
+        ]);
+
+        return redirect()->back()->with('success', 'Berhasil di Input');
+    }
 }

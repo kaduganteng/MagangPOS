@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateInventoryTable extends Migration
+class CreatePeminjamanTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,14 +13,12 @@ class CreateInventoryTable extends Migration
      */
     public function up()
     {
-        Schema::create('inventory', function (Blueprint $table) {
+        Schema::create('peminjaman', function (Blueprint $table) {
             $table->id();
-            $table->integer('kategori_id');
-            $table->string('nama');
-            $table->string('sn');
-            $table->string('merk');
-            $table->string('kelengkapan');
-            $table->date('tgl_masuk');
+            $table->integer('inv_id');
+            $table->integer('nippos');
+            $table->date('tgl_peminjaman');
+            $table->string('surat_peminjaman')->nullable();
             $table->timestamps();
         });
     }
@@ -32,6 +30,6 @@ class CreateInventoryTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('inventory');
+        Schema::dropIfExists('peminjaman');
     }
 }
