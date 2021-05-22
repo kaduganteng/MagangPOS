@@ -44,5 +44,6 @@ class InventoryController extends Controller
     {
         $destroy = Inventory::destroy($id);
         return redirect()->back()->with('success', 'Berhasil di dihapus ');
+        
     }
 }

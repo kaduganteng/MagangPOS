@@ -23,7 +23,7 @@
   <!-- Site wrapper -->
   <div class="wrapper">
     <!-- Navbar -->
-    <nav class="main-header navbar navbar-expand navbar-white navbar-light">
+    <nav class="main-header navbar navbar-expand navbar-black navbar-dark">
       <!-- Left navbar links -->
       <ul class="navbar-nav">
         <li class="nav-item">
@@ -32,8 +32,7 @@
         <li class="nav-item d-none d-sm-inline-block">
           <a href="{{ asset('assets') }}/index3.html" class="nav-link">Home</a>
         </li>
-        <li class="nav-item d-none d-sm-inline-block">
-          <a href="#" class="nav-link">Contact</a>
+
         </li>
       </ul>
 
@@ -80,7 +79,7 @@
 
             </a>
             <div class="dropdown-divider"></div>
-            <a href="#" class="dropdown-item dropdown-footer">See All Messages</a>
+            <a href="#" class="dropdown-item dropdown-footer">Lihat semua pemberitahuan</a>
           </div>
         </li>
         <!-- Notifications Dropdown Menu -->
@@ -101,7 +100,7 @@
     <!-- /.navbar -->
 
     <!-- Main Sidebar Container -->
-    <aside class="main-sidebar navbar-orange elevation-4">
+    <aside class="main-sidebar navbar-dark elevation-4">
       <!-- Brand Logo -->
       <a href="{{ asset('assets') }}/index3.html" class="brand-link">
         <img src="{{ asset('assets') }}/dist/img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
@@ -149,7 +148,7 @@
               <a href="{{route('inventory')}}" class="nav-link">
                 <i class="nav-icon far fa-image"></i>
                 <p>
-                  Inventory
+                  Inventori
                 </p>
               </a>
             </li>
@@ -165,7 +164,7 @@
               <a href="{{route('peminjaman.index')}}" class="nav-link">
                 <i class="nav-icon fas fa-tachometer-alt"></i>
                 <p>
-                  Data Peminjaman
+                  Peminjaman
                 </p>
               </a>
             </li>
@@ -173,7 +172,7 @@
               <a href="{{route('PengembalianBarang.index')}}" class="nav-link">
                 <i class="nav-icon far fa-image"></i>
                 <p>
-                  Pengembalian Barang
+                  Pengembalian
                 </p>
               </a>
             </li>

@@ -1,10 +1,10 @@
 <footer class="main-footer">
 
-  <strong>Dibuat oleh Mahasiswa Amik Badnung.</strong>
+  <strong>Dibuat oleh Mahasiswa Bandung *onprogress</strong>
 </footer>
 
 <!-- Control Sidebar -->
-<aside class="control-sidebar control-sidebar-dark">
+<aside class="control-sidebar control-sidebar-light">
   <!-- Control sidebar content goes here -->
 </aside>
 <!-- /.control-sidebar -->
@@ -34,10 +34,9 @@
 <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
 <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
 <script>
-
-$(document).ready(function() {
+  $(document).ready(function() {
     $('.select2').select2();
-});
+  });
 </script>
 <script>
   $(function() {
