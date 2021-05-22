@@ -9,7 +9,7 @@
     </div>
 </div>
 @endif
-<!-- general form elements -->
+<!-- general form elements -->  
 <div class="card card-primary">
     <div class="card-header">
         <h3 class="card-title">Tambah Barang</h3>
@@ -42,7 +42,8 @@
             </div>
             <div class="form-group">
                 <label for="exampleInputPassword1">Kelengkapan</label>
-                <input type="text" class="form-control" name="kelengkapan" id="kelengkapan" placeholder="Masukan Kelengkapan ">
+                <textarea name="kelengkapan" id="kelengkapan" cols="30" rows="10"></textarea>
+                <!-- <input type="text" class="form-control" name="kelengkapan" id="kelengkapan" placeholder="Masukan Kelengkapan "> -->
             </div>
 
             <div class="form-group">
@@ -60,4 +61,11 @@
     </form>
 </div>
 <!-- /.card -->
+@endsection
+
+@section('script')
+<script src="https://cdn.ckeditor.com/4.16.1/standard/ckeditor.js"></script>
+<script>
+    CKEDITOR.replace('kelengkapan');
+</script>
 @endsection

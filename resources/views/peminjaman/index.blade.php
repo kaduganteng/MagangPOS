@@ -37,7 +37,7 @@
                         <td>No</td>
                         <td>Barang Di Pinjam</td>
                         <td>Tanggal Pinjam</td>
-                        <td>NIPPOS</td>
+                        <td>Nama Peminjam</td>
                         <td>Surat Peminjaman</td>
                     </tr>
                 </thead>
@@ -51,7 +51,7 @@
                         <td>{{$no++}}</td>
                         <td>{{$p->nama}}</td>
                         <td>{{$p->tgl_peminjaman}}</td>
-                        <td>{{$p->nippos}}</td>
+                        <td>{{$p->name}}</td>
                         <td>{{$p->surat_peminjaman}}</td>
                     </tr>
                     @endforeach

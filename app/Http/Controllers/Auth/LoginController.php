@@ -32,7 +32,8 @@ class LoginController extends Controller
     protected function redirectTo()
     {
         if (Auth::user()->role_id == 1) {
-            return '/inventory';
+            // return redirect()->route('inventory');
+            return '/admin/inventory';
         }
         return '/home';
     }

@@ -8,7 +8,7 @@ class Pengembalian extends Model
 {
     protected $table = 'pengembalian';
     protected $fillable = [
-        'pengembalian_id',
+        'peminjaman_id',
         'tgl_pengembalian'
     ];
 }

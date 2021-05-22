@@ -30,6 +30,15 @@
 <script src="{{ asset('assets') }}/plugins/datatables-buttons/js/buttons.html5.min.js"></script>
 <script src="{{ asset('assets') }}/plugins/datatables-buttons/js/buttons.print.min.js"></script>
 <script src="{{ asset('assets') }}/plugins/datatables-buttons/js/buttons.colVis.min.js"></script>
+<!-- select2 -->
+<link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+<script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+<script>
+
+$(document).ready(function() {
+    $('.select2').select2();
+});
+</script>
 <script>
   $(function() {
     $("#example1").DataTable({
@@ -40,6 +49,8 @@
 
   });
 </script>
+@yield('script')
+
 </body>
 
 </html>

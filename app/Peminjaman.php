@@ -11,6 +11,7 @@ class Peminjaman extends Model
         'inv_id',
         'nippos',
         'tgl_peminjaman',
-        'surat_peminjaman'
+        'surat_peminjaman',
+        'status'
     ];
 }

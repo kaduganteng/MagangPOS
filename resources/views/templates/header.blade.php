@@ -13,6 +13,8 @@
   <!-- Theme style -->
   <link rel="stylesheet" href="{{ asset('assets') }}/dist/css/adminlte.min.css">
   @stack('style')
+  <!-- Ionicons -->
+  <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
 
 </head>
 
@@ -136,7 +138,7 @@
             <!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->
             <li class="nav-item">
-              <a href="{{route('home')}}" class="nav-link">
+              <a href="{{route('dashboard')}}" class="nav-link">
                 <i class="nav-icon fas fa-tachometer-alt"></i>
                 <p>
                   Dashboard
@@ -160,7 +162,7 @@
               </a>
             </li>
             <li class="nav-item">
-              <a href="{{route('peminjaman.store')}}" class="nav-link">
+              <a href="{{route('peminjaman.index')}}" class="nav-link">
                 <i class="nav-icon fas fa-tachometer-alt"></i>
                 <p>
                   Data Peminjaman
@@ -168,7 +170,7 @@
               </a>
             </li>
             <li class="nav-item">
-              <a href="{{route('PengembalianBarang.store')}}" class="nav-link">
+              <a href="{{route('PengembalianBarang.index')}}" class="nav-link">
                 <i class="nav-icon far fa-image"></i>
                 <p>
                   Pengembalian Barang
@@ -176,7 +178,7 @@
               </a>
             </li>
             <li class="nav-item">
-              <a href="{{route('pemasangan.store')}}" class="nav-link">
+              <a href="{{route('pemasangan.index')}}" class="nav-link">
                 <i class="nav-icon far fa-image"></i>
                 <p>
                   Pemasangan WebCam

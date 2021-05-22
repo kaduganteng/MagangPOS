@@ -60,7 +60,7 @@
                 <div class="card-header">{{ __('Dashboard') }}</div>
                 <div class="card-header">
                     <a href="{{route('userpinjam')}}">
-                        <button class="btn btn-primary">PINJAM KESINI NGAB</button>
+                        <button class="btn btn-primary">PINJAM KLIK DISINI</button>
 
                     </a>
                 </div>

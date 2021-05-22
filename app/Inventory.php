@@ -13,6 +13,7 @@ class Inventory extends Model
         'merk',
         'kelengkapan',
         'tgl_masuk',
-        'kategori_id'
+        'kategori_id',
+        'status'
     ];
 }

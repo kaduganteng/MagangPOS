@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Inventory;
 use App\pemasangan;
+use App\KategoriInventory;
 use Illuminate\Http\Request;
 
 class PemasanganController extends Controller
@@ -11,8 +12,8 @@ class PemasanganController extends Controller
 
     public function index()
     {
-        $pemasangan = Inventory::select('inventory.*', 'pemasangan.inv_id')
-            ->join('pemasangan', 'pemasangan.id', '=', 'inventory.kategori_id')
+        $pemasangan = Inventory::select('inventory.nama', 'pemasangan.*')
+            ->join('pemasangan', 'pemasangan.inv_id', '=', 'inventory.id')
             ->get();
         return view('pemasangan.index', [
             'inv' => $pemasangan
@@ -20,9 +21,10 @@ class PemasanganController extends Controller
     }
     public function create()
     {
-        $inv = Inventory::all();
+        $webcam = KategoriInventory::where('nama_kategori', 'webcam')->first();
+        $pemasangan = Inventory::where('kategori_id', $webcam->id)->get();
         return view('pemasangan/form', [
-            'pemasangan' => $inv
+            'pemasangan' => $pemasangan
         ]);
     }
     public function store(Request $request)

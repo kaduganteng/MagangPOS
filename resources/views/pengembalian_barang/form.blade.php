@@ -20,10 +20,10 @@
         @csrf
         <div class="card-body">
             <div class="form-group">
-                <label for="exampleInputEmail1">ID Peminjaman</label>
-                <select name="inv_id">
-                    @foreach($pengembalian as $p)
-                    <option value="{{$p->id}}">{{$p->nippos}}</option>
+                <label for="exampleInputEmail1">Nama Barang</label>
+                <select class="form-control select2" name="peminjaman_id">
+                    @foreach($pinjam as $p)
+                    <option value="{{$p->id}}">{{$p->nama}}</option>
                     @endforeach
                 </select>
             </div>

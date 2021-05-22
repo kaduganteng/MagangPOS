@@ -20,6 +20,7 @@
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 
+
 </head>
 
 <body>
@@ -41,6 +42,7 @@
 
                     <!-- Right Side Of Navbar -->
                     <ul class="navbar-nav ml-auto">
+
                         <!-- Authentication Links -->
                         @guest
                         <li class="nav-item">
@@ -52,6 +54,11 @@
                         </li>
                         @endif
                         @else
+                        @if(Auth::user()->role_id=='1')
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ route('inventory') }}">{{ __('Admin') }}</a>
+                        </li>
+                        @endif
                         <li class="nav-item dropdown">
                             <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                 {{ Auth::user()->name }}
@@ -79,5 +86,13 @@
         </main>
     </div>
 </body>
+<!-- select2 -->
+<link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+<script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+<script>
+    $(document).ready(function() {
+        $('.select2').select2();
+    });
+</script>
 
 </html>

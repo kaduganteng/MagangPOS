@@ -16,12 +16,13 @@
     </div>
     <!-- /.card-header -->
     <!-- form start -->
-    <form action="{{route('peminjaman.store')}}" method="post">
+    <form action="{{route('peminjaman.store')}}" method="post" enctype="multipart/form-data">
         @csrf
         <div class="card-body">
             <div class="form-group">
                 <label for="exampleInputEmail1">Inventory</label>
-                <select name="inv_id">
+
+                <select class="form-control select2" name="inv_id">
                     @foreach($peminjaman as $p)
                     <option value="{{$p->id}}">{{$p->nama}}</option>
                     @endforeach
@@ -35,11 +36,16 @@
             </div>
             <div class="form-group">
                 <label for="exampleInputPassword1">NIPPOS</label>
-                <input type="text" class="form-control" name="nip" id="nip" placeholder="Masukan NIPPOS anda">
+                <select class="form-control select2" name="nip" id="nip">
+                    @foreach($user as $u)
+                    <option value="{{$u->nippos}}">{{$u->nippos}} - {{$u->name}}</option>
+                    @endforeach
+                </select>
+
             </div>
             <div class="form-group">
                 <label for="exampleInputPassword1">Surat Peminjaman</label>
-                <input type="text" class="form-control" name="suratpinjam" id="suratpinjam" placeholder="Masukan NIPPOS anda">
+                <input type="file" class="form-control" name="suratpinjam" id="suratpinjam">
             </div>
         </div>
         <!-- /.card-body -->

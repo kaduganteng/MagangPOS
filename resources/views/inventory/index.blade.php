@@ -1,6 +1,15 @@
 @extends('templates/header')
 
 @section('content')
+
+@if(session()->has('success'))
+<div id="toastsContainerTopRight" class="toasts-top-right fixed">
+  <div class="toast bg-success fade show" role="alert" aria-live="assertive" aria-atomic="true">
+    <div class="toast-header"><strong class="mr-auto">Berhasil</strong><button data-dismiss="toast" type="button" class="ml-2 mb-1 close" aria-label="Close"><span aria-hidden="true">×</span></button></div>
+    <div class="toast-body">{{Session::get('success')}}</div>
+  </div>
+</div>
+@endif
 <!-- Content Header (Page header) -->
 <section class="content-header">
   <div class="container-fluid">
@@ -41,6 +50,7 @@
             <td>MERK</td>
             <td>Kelengkapan</td>
             <td>Tanggal Masuk</td>
+            <td>Opsi</td>
           </tr>
         </thead>
         <tbody>
@@ -55,8 +65,12 @@
             <td>{{$i->nama}}</td>
             <td>{{$i->sn}}</td>
             <td>{{$i->merk}}</td>
-            <td>{{$i->kelengkapan}}</td>
-          <td>{{$i->tgl_masuk}}</td>
+            <td>{!!$i->kelengkapan!!}</td>
+            <td>{{$i->tgl_masuk}}</td>
+            <td>
+              <a href="{{route('inventory.destroy',$i->id)}}"><button>DELETE</button></a>
+
+            </td>
 
           </tr>
           @endforeach
