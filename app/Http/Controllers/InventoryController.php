@@ -9,7 +9,7 @@ class InventoryController extends Controller
     public function index()
     {
         $inv=DB::table('inventory')->select('*')->get();
-        dd($inv);
+        // dd($inv);
         return view('inventory/index');
     }
 }
