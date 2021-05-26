@@ -15,10 +15,12 @@ class CreateInventoryTable extends Migration
     {
         Schema::create('inventory', function (Blueprint $table) {
             $table->id();
+            $table->integer('kategori_id');
             $table->string('nama');
-            $table->string('kode');
-            $table->date('tanggal_masuk');
-            $table->date('tanggal_keluar')->nullable;
+            $table->string('sn');
+            $table->string('merk');
+            $table->string('kelengkapan');
+            $table->date('tgl_masuk');
             $table->timestamps();
         });
     }
