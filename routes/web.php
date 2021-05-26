@@ -47,11 +47,15 @@ Route::group(['middleware' => 'isAdmin'], function () {
         Route::get('/kategori/create', 'KategoriInventoryController@create')->name('kategori.create');
         Route::get('/peminjaman/create', 'PeminjamanController@create')->name('peminjaman.create');
         Route::get('/peminjaman', 'PeminjamanController@index')->name('peminjaman.index');
+        Route::post('/peminjaman/store', 'PeminjamanController@store')->name('admin.peminjaman.store');
+
         Route::get('/pemasangan/create', 'PemasanganController@create')->name('pemasangan.create');
         Route::post('/pemasangan/store', 'PemasanganController@store')->name('pemasangan.store');
         Route::get('/pemasangan', 'PemasanganController@index')->name('pemasangan.index');
         Route::get('/dashboard', 'DashboardAdminController@index')->name('dashboard');
         Route::get('/inventory/delete/{id}', 'InventoryController@destroy')->name('inventory.destroy');
+        Route::get('/inventory/edit/{id}', 'InventoryController@edit')->name('inventory.edit');
+        Route::post('/inventory/update/{id}', 'InventoryController@update')->name('inventory.update');
     });
 });
 

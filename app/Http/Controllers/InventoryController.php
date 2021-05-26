@@ -44,6 +44,30 @@ class InventoryController extends Controller
     {
         $destroy = Inventory::destroy($id);
         return redirect()->back()->with('success', 'Berhasil di dihapus ');
-        
+    }
+    public function edit($id)
+    {
+        $data = Inventory::select('inventory.*', 'kategori_inventory.nama_kategori')->where('inventory.id', $id)->join('kategori_inventory', 'kategori_inventory.id', '=', 'inventory.kategori_id')->first();
+        $kategori = KategoriInventory::all();
+
+        return view('inventory.form', [
+            'data' => $data,
+            'kategori' => $kategori
+
+        ]);
+    }
+
+    public function update(Request $request, $id)
+    {
+        $inv = Inventory::findOrFail($id)->update([
+            'nama' => $request->nama_barang,
+            'sn' => $request->sn,
+            'merk' => $request->merk,
+            'kelengkapan' => $request->kelengkapan,
+            'tgl_masuk' => $request->tanggal_masuk,
+            'kategori_id' => $request->kategori_id
+        ]);
+
+        return redirect()->route('inventory')->with('success', 'Berhasil di update');
     }
 }

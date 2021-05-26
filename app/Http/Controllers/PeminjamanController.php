@@ -23,10 +23,10 @@ class PeminjamanController extends Controller
     public function create()
     {
         $inv = Inventory::where('status', 'ada')->get();
-        $user= User::all();
+        $user = User::all();
         return view('peminjaman/form', [
-            'peminjaman' => $inv ,
-            'user'=>$user
+            'peminjaman' => $inv,
+            'user' => $user
         ]);
     }
     public function store(Request $request)
@@ -48,6 +48,8 @@ class PeminjamanController extends Controller
             'surat_peminjaman' => $tujuan_upload . $nama_file
 
         ]);
+
+
 
 
 

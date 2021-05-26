@@ -5,23 +5,26 @@
 <div id="toastsContainerTopRight" class="toasts-top-right fixed">
     <div class="toast bg-success fade show" role="alert" aria-live="assertive" aria-atomic="true">
         <div class="toast-header"><strong class="mr-auto">Berhasil</strong><button data-dismiss="toast" type="button" class="ml-2 mb-1 close" aria-label="Close"><span aria-hidden="true">×</span></button></div>
-        <div class="toast-body">Data anda sudah ditambahkan!!!!!!!!!!!!!!!!!!!!!!!!!!!!!</div>
+        <div class="toast-body">Data Berhasil Ditambahkan.</div>
     </div>
 </div>
 @endif
-<!-- general form elements -->  
+<!-- general form elements -->
 <div class="card card-primary">
     <div class="card-header">
         <h3 class="card-title">Tambah Barang</h3>
     </div>
     <!-- /.card-header -->
     <!-- form start -->
-    <form action="{{route('inventory.store')}}" method="post">
+    <form action="{{empty($data) ? route('inventory.store'):route('inventory.update',$data->id)}}" method="post">
         @csrf
         <div class="card-body">
             <div class="form-group">
                 <label for="exampleInputEmail1">Kategori</label>
                 <select name="kategori_id">
+                    @if(!empty(@$data->kategori_id))
+                    <option value="{{@$data->kategori_id}}" {{!empty($data->nama_kategori)?'selected':''}}>{{$data->nama_kategori}}</option>
+                    @endif
                     @foreach($kategori as $k)
                     <option value="{{$k->id}}">{{$k->nama_kategori}}</option>
                     @endforeach
@@ -29,26 +32,26 @@
             </div>
             <div class="form-group">
                 <label for="exampleInputEmail1">Nama Barang</label>
-                <input type="text" class="form-control" name="nama_barang" id="nama_barang" placeholder="Masukan Nama Barang">
+                <input type="text" class="form-control" name="nama_barang" id="nama_barang" value="{{@$data->nama}}" placeholder="Masukan Nama Barang">
             </div>
             <div class="form-group">
                 <label for="exampleInputPassword1">Nomor Serial</label>
-                <input type="text" class="form-control" name="sn" id="sn" placeholder="Masukan Nomor Serial ">
+                <input type="text" class="form-control" name="sn" id="sn" value="{{@$data->sn}}" placeholder="Masukan Nomor Serial ">
             </div>
 
             <div class="form-group">
                 <label for="exampleInputPassword1">Merk</label>
-                <input type="text" class="form-control" name="merk" id="merk" placeholder="Masukan Merk ">
+                <input type="text" class="form-control" name="merk" id="merk" value="{{@$data->merk}}" placeholder="Masukan Merk ">
             </div>
             <div class="form-group">
                 <label for="exampleInputPassword1">Kelengkapan</label>
-                <textarea name="kelengkapan" id="kelengkapan" cols="30" rows="10"></textarea>
+                <textarea name="kelengkapan" id="kelengkapan" cols="30" rows="10">{{empty($data)? '':$data->kelengkapan}}</textarea>
                 <!-- <input type="text" class="form-control" name="kelengkapan" id="kelengkapan" placeholder="Masukan Kelengkapan "> -->
             </div>
 
             <div class="form-group">
                 <label for="exampleInputFile">Tanggal Masuk</label>
-                <input type="date" class="form-control" name="tanggal_masuk" id="tanggal_masuk">
+                <input type="date" class="form-control" name="tanggal_masuk" id="tanggal_masuk" value="{{@$data->tgl_masuk}}">
 
             </div>
 

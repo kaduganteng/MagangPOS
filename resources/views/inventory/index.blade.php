@@ -68,6 +68,8 @@
             <td>{{$i->tgl_masuk}}</td>
             <td>
               <a href="{{route('inventory.destroy',$i->id)}}"><button class="btn btn-primary">DELETE</button></a>
+              <a href="{{route('inventory.edit',$i->id)}}"><button class="btn btn-primary">UPDATE</button></a>
+
 
 
             </td>
