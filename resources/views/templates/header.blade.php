@@ -23,14 +23,14 @@
   <!-- Site wrapper -->
   <div class="wrapper">
     <!-- Navbar -->
-    <nav class="main-header navbar navbar-expand navbar-black navbar-dark">
+    <nav class="main-header navbar navbar-expand navbar-black" style="background-color:#f7a440;">
       <!-- Left navbar links -->
       <ul class="navbar-nav">
         <li class="nav-item">
-          <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
+          <a class="nav-link" data-widget="pushmenu" href="#" role="button" style="color:white;"><i class="fas fa-bars"></i></a>
         </li>
         <li class="nav-item d-none d-sm-inline-block">
-          <a href="{{ asset('assets') }}/index3.html" class="nav-link">Home</a>
+          <a href="{{ asset('assets') }}/index3.html" class="nav-link" style="color:white;">Home</a>
         </li>
 
         </li>
@@ -38,31 +38,10 @@
 
       <!-- Right navbar links -->
       <ul class="navbar-nav ml-auto">
-        <!-- Navbar Search -->
-        <li class="nav-item">
-          <a class="nav-link" data-widget="navbar-search" href="#" role="button">
-            <i class="fas fa-search"></i>
-          </a>
-          <div class="navbar-search-block">
-            <form class="form-inline">
-              <div class="input-group input-group-sm">
-                <input class="form-control form-control-navbar" type="search" placeholder="Search" aria-label="Search">
-                <div class="input-group-append">
-                  <button class="btn btn-navbar" type="submit">
-                    <i class="fas fa-search"></i>
-                  </button>
-                  <button class="btn btn-navbar" type="button" data-widget="navbar-search">
-                    <i class="fas fa-times"></i>
-                  </button>
-                </div>
-              </div>
-            </form>
-          </div>
-        </li>
 
         <!-- Messages Dropdown Menu -->
         <li class="nav-item dropdown">
-          <a class="nav-link" data-toggle="dropdown" href="#">
+          <a class="nav-link" data-toggle="dropdown" href="#" style="color: white;">
             <i class="far fa-comments"></i>
             <span class="badge badge-danger navbar-badge"></span>
           </a>
@@ -86,12 +65,12 @@
 
         </li>
         <li class="nav-item">
-          <a class="nav-link" data-widget="fullscreen" href="#" role="button">
+          <a class="nav-link" data-widget="fullscreen" href="#" role="button" style="color: white;">
             <i class="fas fa-expand-arrows-alt"></i>
           </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" data-widget="control-sidebar" data-slide="true" href="#" role="button">
+          <a class="nav-link" data-widget="control-sidebar" data-slide="true" href="#" role="button" style="color: white;">
             <i class="fas fa-th-large"></i>
           </a>
         </li>
@@ -100,11 +79,11 @@
     <!-- /.navbar -->
 
     <!-- Main Sidebar Container -->
-    <aside class="main-sidebar navbar-dark elevation-4">
+    <aside class="main-sidebar  elevation-4" style="background-color:#e1701a;">
       <!-- Brand Logo -->
       <a href="{{ asset('assets') }}/index3.html" class="brand-link">
         <img src="{{ asset('assets') }}/dist/img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
-        <span class="brand-text font-weight-light">{{config('app.name')}}</span>
+        <span style="color:white;" class="brand-text font-weight-light">{{config('app.name')}}</span>
       </a>
 
       <!-- Sidebar -->
@@ -115,72 +94,60 @@
             <img src="{{ asset('assets') }}/dist/img/user2-160x160.jpg" class="img-circle elevation-2" alt="User Image">
           </div>
           <div class="info">
-            <a href="#" class="d-block">Admin</a>
+            <a href="#" style="color:white;" class="d-block">Admin</a>
           </div>
         </div>
-
-        <!-- SidebarSearch Form -->
-        <div class="form-inline">
-          <div class="input-group" data-widget="sidebar-search">
-            <input class="form-control form-control-sidebar" type="search" placeholder="Search" aria-label="Search">
-            <div class="input-group-append">
-              <button class="btn btn-sidebar">
-                <i class="fas fa-search fa-fw"></i>
-              </button>
-            </div>
-          </div>
-        </div>
-
+        <hr style="background-color: white;">
         <!-- Sidebar Menu -->
         <nav class="mt-2">
           <ul class="nav nav-pills nav-sidebar flex-column " data-widget="treeview" role="menu" data-accordion="false">
             <!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->
             <li class="nav-item">
-              <a href="{{route('dashboard')}}" class="nav-link">
-                <i class="nav-icon fas fa-tachometer-alt"></i>
+              <a href="{{route('dashboard')}}" style="color:white;" class="nav-link">
+                <i class="fa fa-tachometer-alt"></i>
                 <p>
-                  Dashboard
+                  &nbsp;Dashboard
                 </p>
               </a>
             </li>
             <li class="nav-item">
-              <a href="{{route('inventory')}}" class="nav-link">
-                <i class="nav-icon far fa-image"></i>
+              <a href="{{route('inventory')}}" style="color:white;" class="nav-link">
+                <i class="fa fa-archive"></i>
                 <p>
-                  Inventori
+                  &nbsp; Inventori
                 </p>
               </a>
             </li>
             <li class="nav-item">
-              <a href="{{route('kategori_inventory')}}" class="nav-link">
-                <i class="nav-icon far fa-image"></i>
+              <a href="{{route('kategori_inventory')}}" style="color:white;" class="nav-link">
+                <i class="fa fa-bars"></i>
                 <p>
-                  Kategori Inventori
+                  &nbsp; Kategori Inventori
                 </p>
               </a>
             </li>
             <li class="nav-item">
-              <a href="{{route('peminjaman.index')}}" class="nav-link">
-                <i class="nav-icon fas fa-tachometer-alt"></i>
+              <a href="{{route('peminjaman.index')}}" style="color:white;" class="nav-link">
+                <i class="fa fa-upload"></i>
                 <p>
-                  Peminjaman
+                  &nbsp; Peminjaman
                 </p>
               </a>
             </li>
             <li class="nav-item">
-              <a href="{{route('PengembalianBarang.index')}}" class="nav-link">
-                <i class="nav-icon far fa-image"></i>
+              <a href="{{route('PengembalianBarang.index')}}" style="color:white;" class="nav-link">
+                <i class="fa fa-download"></i>
                 <p>
-                  Pengembalian
+                  &nbsp; Pengembalian
                 </p>
               </a>
             </li>
             <li class="nav-item">
-              <a href="{{route('pemasangan.index')}}" class="nav-link">
-                <i class="nav-icon far fa-image"></i>
+              <a href="{{route('pemasangan.index')}}" style="color:white;" class="nav-link">
+                <i class="fa fa-camera"></i>
                 <p>
-                  Pemasangan WebCam
+                  &nbsp; Pemasangan WebCam
                 </p>
               </a>
             </li>
