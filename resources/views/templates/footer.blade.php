@@ -1,6 +1,6 @@
 <footer class="main-footer">
 
-  <strong>Dibuat oleh Mahasiswa Bandung *onprogress</strong>
+  <strong>@copyright2021</strong>
 </footer>
 
 <!-- Control Sidebar -->
