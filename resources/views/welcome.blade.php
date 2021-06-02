@@ -87,7 +87,7 @@
 
             <h1>JL.Banda NO.30 </h1>
 
-
+            
         </div>
     </div>
     </div>
