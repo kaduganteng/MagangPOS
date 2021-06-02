@@ -2,7 +2,7 @@
 @section('style')
 <style>
     body {
-        background: url('posindo.jpg');
+        background: url('image/posindo.jpg');
         background-repeat: no-repeat;
         background-attachment: fixed;
         background-size: cover;
@@ -20,8 +20,8 @@
 
     <div class="row justify-content-center ">
         <div class="col-md-8">
-            <div class="card">
-                <div class="card-header text-black">{{ __('Login') }}</div>
+            <div class="card" style="margin-top: 5cm;">
+                <div class="card-header text-black" style="background-color: orange;text-align: center;"><h1><b>{{ __('LOGIN') }}</b></h1></div>
 
                 <div class="card-body">
                     <form method="POST" action="{{ route('login') }}">
@@ -59,6 +59,7 @@
                                 <button type="submit" class="btn btn-primary">
                                     {{ __('Login') }}
                                 </button>
+                                
 
                                 @if (Route::has('password.request'))
                                 <a class="btn btn-link" href="{{ route('password.request') }}">
