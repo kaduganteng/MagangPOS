@@ -31,9 +31,9 @@
 
                         <p>{{$s->nama_kategori}}</p>
                     </div>
-                    <!-- <div class="icon">
-                        <i class="ion ion-heart-broken"></i>
-                    </div> -->
+                    <div class="icon">
+                        <i class="ion ion-clipboard"></i>
+                    </div>
                 </div>
             </div>
             @endforeach

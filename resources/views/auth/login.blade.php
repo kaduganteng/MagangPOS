@@ -21,7 +21,9 @@
     <div class="row justify-content-center ">
         <div class="col-md-8">
             <div class="card" style="margin-top: 5cm;">
-                <div class="card-header text-black" style="background-color: orange;text-align: center;"><h1><b>{{ __('LOGIN') }}</b></h1></div>
+                <div class="card-header text-black" style="background-color: orange;text-align: center;">
+                    <h1><b>{{ __('LOGIN') }}</b></h1>
+                </div>
 
                 <div class="card-body">
                     <form method="POST" action="{{ route('login') }}">
@@ -59,19 +61,30 @@
                                 <button type="submit" class="btn btn-primary">
                                     {{ __('Login') }}
                                 </button>
-                                
+
 
                                 @if (Route::has('password.request'))
                                 <a class="btn btn-link" href="{{ route('password.request') }}">
                                     {{ __('Forgot Your Password?') }}
                                 </a>
                                 @endif
+                                @if (Route::has('register'))
+                                <a class="btn btn-link" href="{{ route('register') }}">
+                                    {{ __('Silahkan Register Terlebih Dahulu') }}
+                                </a>
+                                @endif
+
                             </div>
+
+
                         </div>
-                    </form>
+
                 </div>
+
+                </form>
             </div>
         </div>
     </div>
+</div>
 </div>
 @endsection

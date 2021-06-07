@@ -40,7 +40,7 @@
                     @foreach($user as $u)
                     <option value="{{$u->nippos}}">{{$u->nippos}} - {{$u->name}}</option>
                     @endforeach
-                </select>
+</select>
             </div>
             <div class="form-group">
                 <label for="exampleInputPassword1">Surat Peminjaman</label>
