@@ -59,10 +59,28 @@
             <div class="card">
                 <div class="card-header">{{ __('Dashboard') }}</div>
                 <div class="card-header">
-                    <a href="{{route('userpinjam')}}">
-                        <button class="btn btn-primary">PINJAM KLIK DISINI</button>
 
-                    </a>
+                    <div class="container-fluid">
+                        <div class="row">
+
+                            <div class="col-lg-3 col-6">
+                                <!-- small box -->
+                                <div class="small-box bg-info">
+                                    <div class="inner">
+                                        <h3>PIJAM</h3>
+
+                                        <p>Jangka waktu Pendek</p>
+                                    </div>
+                                    <div class="icon">
+                                        <i class="ion ion-clipboard"></i>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+                            <!-- ./col -->
+                        </div>
+                    </div>
                 </div>
 
                 <div class="card-body">
@@ -77,6 +95,11 @@
                     <h1>JL.Banda NO.30</h1>
                     {{ __('Selamat datang di POS INDONESIA!') }}
                 </div>
+
+                <a href="{{route('userpinjam')}}">
+                    <button class="btn btn-primary">PINJAM KLIK DISINI</button>
+
+                </a>
             </div>
         </div>
     </div>

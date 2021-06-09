@@ -17,6 +17,8 @@
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
 
+    <link rel="shortcut icon" href="{{asset('image/pos.png')}}" type="image/x-icon">
+
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     @yield('style')
@@ -26,7 +28,8 @@
 
 <body>
     <div id="app">
-        <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
+        @auth
+        <nav class="navbar navbar-expand-md navbar-light shadow-sm">
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/') }}">
                     {{ config('app.name') }}
@@ -74,7 +77,7 @@
                 </div>
             </div>
         </nav>
-
+        @endauth
         <main class="py-4">
             @yield('content')
         </main>
