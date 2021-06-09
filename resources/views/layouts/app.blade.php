@@ -1,5 +1,6 @@
 <!doctype html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+<link rel="shortcut icon" href="{{asset('image/pos.png')}}" type="image/x-icon">
 
 <head>
     <meta charset="utf-8">
@@ -27,6 +28,7 @@
 </head>
 
 <body>
+
     <div id="app">
         @auth
         <nav class="navbar navbar-expand-md navbar-light shadow-sm">

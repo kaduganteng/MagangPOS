@@ -57,49 +57,15 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header">{{ __('Dashboard') }}</div>
-                <div class="card-header">
+                <div class="card-header" style="text-align: center;background-color:transparent">{{ __('DASHBOARD PEMINJAMAN') }}</div>
 
-                    <div class="container-fluid">
-                        <div class="row">
 
-                            <div class="col-lg-3 col-6">
-                                <!-- small box -->
-                                <div class="small-box bg-info">
-                                    <div class="inner">
-                                        <h3>PIJAM</h3>
-
-                                        <p>Jangka waktu Pendek</p>
-                                    </div>
-                                    <div class="icon">
-                                        <i class="ion ion-clipboard"></i>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
-                            <!-- ./col -->
-                        </div>
-                    </div>
-                </div>
-
-                <div class="card-body">
-                    @if (session('status'))
-                    <div class="alert alert-success" role="alert">
-                        {{ session('status') }}
-                    </div>
-                    @endif
-
-                    <img class="img-fluid" src="{{asset('image/pos.png')}}" style="height: 350px; width :auto">
-
-                    <h1>JL.Banda NO.30</h1>
-                    {{ __('Selamat datang di POS INDONESIA!') }}
-                </div>
-
-                <a href="{{route('userpinjam')}}">
-                    <button class="btn btn-primary">PINJAM KLIK DISINI</button>
+                <a href="{{route('userpinjam')}}" style="text-align: center;background-color:transparent">
+                    <button class="btn btn-primary">PINJAM DISINI</button>
+                    <button class="btn btn-primary">PINJAM DISINI</button>
 
                 </a>
+
             </div>
         </div>
     </div>

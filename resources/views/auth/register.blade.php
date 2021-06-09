@@ -1,11 +1,32 @@
 @extends('layouts.app')
+<style>
+    body {
+        background: url('image/hui.jpg');
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+        color: #fff;
+        font-family: comic sans-serif;
+    }
+
+    .text-black {
+        color: black;
+    }
+
+    .text-white {
+        color: white;
+    }
+</style>
 
 @section('content')
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
-            <div class="card">
-                <div class="card-header">{{ __('Register') }}</div>
+            <div class="card text-white" style="background-color: transparent;border-color:transparent">
+                <div class="card-header text-white" style=";text-align: center;">
+                    <img src="{{asset('image/akupos.png')}}" alt="" width="300" height="200">
+
+                </div>
 
                 <div class="card-body">
                     <form method="POST" action="{{ route('register') }}">
@@ -101,9 +122,9 @@
                         </div>
 
                         <div class="form-group row mb-0">
-                            <div class="col-md-6 offset-md-4">
-                                <button type="submit" class="btn btn-primary">
-                                    {{ __('Register') }}
+                            <div class="col-md-6 offset-md-5">
+                                <button type="submit" class="btn btn-primary" style="background-color: transparent;border-color:white;">
+                                    {{ __('REGISTER') }}
                                 </button>
                             </div>
                         </div>
