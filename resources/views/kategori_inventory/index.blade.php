@@ -33,8 +33,8 @@
             <table id="example1" class="table table-bordered table-striped">
                 <thead>
                     <tr>
-                        <td>no</td>
-                        <td>nama kategori</td>
+                        <td>No</td>
+                        <td>Nama Kategori</td>
                     </tr>
                 </thead>
                 <tbody>

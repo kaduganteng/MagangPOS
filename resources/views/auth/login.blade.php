@@ -7,7 +7,8 @@
         background-attachment: fixed;
         background-size: cover;
         color: #fff;
-        font-family: comic sans-serif;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        ;
     }
 
     .text-black {
@@ -29,7 +30,7 @@
 
                 <div class="card-header text-white" style=";text-align: center;">
                     <img src="{{asset('image/akupos.png')}}" alt="" width="300" height="250">
-
+                    <label for="email" class="col-md-8 col-form-label text-white">{{(' WEB INVENTORY')}}</label>
                 </div>
 
                 <div class="card-body">

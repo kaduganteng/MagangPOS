@@ -85,7 +85,7 @@
             <img src="{{ asset('image/admin.png') }}" class="img-circle elevation-2" alt="User Image">
           </div>
           <div class="info">
-            <a href="#" class="d-block text-white">{{Auth::user()->name}}</a>
+            <a href="dataadmin" class="d-block text-white">{{Auth::user()->name}}</a>
           </div>
         </div>
         <hr style="background-color: white;">
@@ -96,7 +96,7 @@
                with font-awesome or any other icon font library -->
             <li class="nav-item">
               <a href="{{route('dashboard')}}" style="color:white;" class="nav-link">
-                <i class="fa fa-tachometer-alt"></i>
+                <i class="fa fa-tachometer-alt"></i>  
                 <p>
                   &nbsp;Dashboard
                 </p>

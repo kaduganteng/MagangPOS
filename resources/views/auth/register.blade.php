@@ -29,6 +29,7 @@
                 </div>
 
                 <div class="card-body">
+
                     <form method="POST" action="{{ route('register') }}">
                         @csrf
 
@@ -126,9 +127,16 @@
                                 <button type="submit" class="btn btn-primary" style="background-color: transparent;border-color:white;">
                                     {{ __('REGISTER') }}
                                 </button>
+
+
                             </div>
+
                         </div>
                     </form>
+                    <a href="{{route('login')}}">
+                        <button class="btn btn-link">Kembali</button>
+
+                    </a>
                 </div>
             </div>
         </div>

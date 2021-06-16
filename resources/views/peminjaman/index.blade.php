@@ -52,6 +52,7 @@
                         <td>{{$p->tgl_peminjaman}}</td>
                         <td>{{$p->name}}</td>
                         <td>{{$p->surat_peminjaman}}</td>
+                        
                     </tr>
                     @endforeach
                 </tbody>

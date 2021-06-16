@@ -9,6 +9,7 @@ use Illuminate\Http\Request;
 use App\Mail\UserPeminjamanEmail;
 use Illuminate\Support\Facades\Mail;
 use PDF;
+
 class UserpinjamController extends Controller
 
 {
@@ -47,9 +48,9 @@ class UserpinjamController extends Controller
         $status = Inventory::findOrFail($request->inv_id)->update([
             'status' => 'tidak'
         ]);
-        Mail::to("hudanur0509@gmail.com")->send(new UserPeminjamanEmail());
-        // return view('struk.struk_peminjaman',['data'=>$request->all()]);
-        $pdf = PDF::loadview('struk.struk_peminjaman',['data'=>$request->all()]);
-    	return $pdf->download('struk-peminjaman-pdf.pdf');
+       // Mail::to("hudanur0509@gmail.com")->send(new UserPeminjamanEmail());
+      //  return view('struk.struk_peminjaman',['data'=>$request->all()]);
+        $pdf = PDF::loadview('struk.struk_peminjaman', ['data' => $request->all()]);
+        return $pdf->download('struk-peminjaman-pdf.pdf');
     }
 }

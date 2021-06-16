@@ -56,8 +56,10 @@ Route::group(['middleware' => 'isAdmin'], function () {
         Route::get('/inventory/delete/{id}', 'InventoryController@destroy')->name('inventory.destroy');
         Route::get('/inventory/edit/{id}', 'InventoryController@edit')->name('inventory.edit');
         Route::post('/inventory/update/{id}', 'InventoryController@update')->name('inventory.update');
+        Route::get('/dataadmin', 'DataAdminController@index')->name('dataadmin');
     });
 });
 
 Route::get('/userpinjam/create', 'UserpinjamController@index')->name('userpinjam');
 Route::post('/peminjaman/store', 'UserpinjamController@store')->name('peminjaman.store');
+Route::get('/home', 'HomeController@index')->name('home');
