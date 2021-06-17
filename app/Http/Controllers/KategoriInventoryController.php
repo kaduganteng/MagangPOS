@@ -14,6 +14,11 @@ class KategoriInventoryController extends Controller
             'kategori' => $kategori
         ]);
     }
+    public function destroy($id)
+    {
+        $destroy = KategoriInventory::destroy($id);
+        return redirect()->back()->with('success', 'Berhasil di dihapus ');
+    }
     public function create()
     {
 
@@ -26,6 +31,6 @@ class KategoriInventoryController extends Controller
 
         ]);
 
-        return redirect()->back()->with('success', 'Berhasil di Input');
+        return redirect()->back()->with ('success', 'Berhasil di Input');
     }
 }

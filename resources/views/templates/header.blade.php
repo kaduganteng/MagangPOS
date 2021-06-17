@@ -19,8 +19,11 @@
 
 </head>
 
-<body class="hold-transition sidebar-mini">
 
+<body class="hold-transition sidebar-mini">
+<div class="preloader flex-column justify-content-center align-items-center">
+    <img class="animation__shake" src="{{asset('image/logo.png')}}" alt="AdminLTELogo" height=100px width="">
+  </div>
   <!-- Site wrapper -->
   <div class="wrapper">
     <!-- Navbar -->
@@ -148,6 +151,7 @@
       </div>
       <!-- /.sidebar -->
     </aside>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <!-- Content Wrapper. Contains page content -->
     <div class="content-wrapper">
       @yield('content')

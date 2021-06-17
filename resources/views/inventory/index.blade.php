@@ -1,6 +1,10 @@
 @extends('templates/header')
 
 @section('content')
+<script>
+swal("Selamat Datang !!");
+
+</script>
 
 @if(session()->has('success'))
 <div id="toastsContainerTopRight" class="toasts-top-right fixed">

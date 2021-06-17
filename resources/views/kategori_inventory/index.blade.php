@@ -1,6 +1,7 @@
 @extends('templates/header')
 
 @section('content')
+
 <!-- Content Header (Page header) -->
 <section class="content-header">
     <div class="container-fluid">
@@ -35,6 +36,7 @@
                     <tr>
                         <td>No</td>
                         <td>Nama Kategori</td>
+                        <td>Opsi</td>
                     </tr>
                 </thead>
                 <tbody>
@@ -46,8 +48,14 @@
                     <tr>
                         <td>{{$no++}}</td>
                         <td>{{$k->nama_kategori}}</td>
+                        <td>
+                        <a href='/## '><button class="btn btn-primary delete">DELETE</button></a>
+
+                        </td>
                     </tr>
                     @endforeach
+                    <td>
+              
                 </tbody>
 
             </table>

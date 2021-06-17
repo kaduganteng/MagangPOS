@@ -24,6 +24,7 @@ class PeminjamanController extends Controller
     {
         $inv = Inventory::where('status', 'ada')->get();
         $user = User::all();
+        
         return view('peminjaman/form', [
             'peminjaman' => $inv,
             'user' => $user

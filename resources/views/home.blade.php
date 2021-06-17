@@ -96,9 +96,7 @@
                                 <!-- smal   l box -->
                                 <div class="small-box bg-info">
                                     <div class="inner">
-                                      
-
-                                        <p>{{$s->nama_kategori}}</p>
+                                       <p>{{$s->nama_kategori}}</p>
                                     </div>
                                     <div class="icon">
                                         <i class="ion ion-clipboard"></i>
