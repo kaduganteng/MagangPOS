@@ -3,7 +3,7 @@
 
 <style>
     body {
-        background: url('image/huhuhu.jpg');
+    background: url('image/huhuhu.jpg');
         background-repeat: no-repeat;
         background-attachment: fixed;
         background-size: cover;

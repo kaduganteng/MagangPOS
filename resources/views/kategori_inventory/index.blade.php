@@ -2,6 +2,16 @@
 
 @section('content')
 
+<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+@if(session()->has('success'))
+<script>
+Swal.fire(
+  'Done!',
+  'Data Anda berhasil Dihapus',
+  'success'
+)
+</script>
+@endif
 <!-- Content Header (Page header) -->
 <section class="content-header">
     <div class="container-fluid">
@@ -49,7 +59,8 @@
                         <td>{{$no++}}</td>
                         <td>{{$k->nama_kategori}}</td>
                         <td>
-                        <a href='/## '><button class="btn btn-primary delete">DELETE</button></a>
+                        <a href="{{route('kategori.destroy',$k->id)}}">
+                        <button class="btn btn-danger delete">DELETE</button></a>
 
                         </td>
                     </tr>

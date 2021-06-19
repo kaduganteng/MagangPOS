@@ -1,13 +1,34 @@
 @extends('layouts.app')
+<style>
+    body {
+        background: url('image/hui.jpg');
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+        color: #fff;
+        font-family: comic sans-serif;
+    }
+
+    .text-black {
+        color: black;
+    }
+
+    .text-white {
+        color: white;
+    }
+</style>
+
 
 @section('content')
+<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 @if(session()->has('success'))
-<div id="toastsContainerTopRight" class="toasts-top-right fixed">
-    <div class="toast bg-success fade show" role="alert" aria-live="assertive" aria-atomic="true">
-        <div class="toast-header"><strong class="mr-auto">Berhasil</strong><button data-dismiss="toast" type="button" class="ml-2 mb-1 close" aria-label="Close"><span aria-hidden="true">×</span></button></div>
-        <div class="toast-body">Data anda sudah ditambahkan!!!!!!!!!!!!!!!!!!!!!!!!!!!!!</div>
-    </div>
-</div>
+<script>
+Swal.fire(
+  'Done!',
+  'Data Anda berhasil Dihapus',
+  'success'
+)
+</script>
 @endif
 <!-- general form elements -->
 <div class="row justify-content-center ">
@@ -16,7 +37,7 @@
             <h3 class="card-title" style="text-align: center;">PINJAM BARANG</h3>
             <h5 class="card-title" style="text-align: center;">isi form dibawah ini sesuai dengan yang anda butuhkan </h5>
 
-        </div>
+        </div>  
         <!-- /.card-header -->
         <!-- form start -->
         <form action="{{route('peminjaman.store')}}" method="post" enctype="multipart/form-data">

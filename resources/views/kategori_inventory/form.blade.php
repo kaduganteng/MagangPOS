@@ -1,11 +1,27 @@
 @extends('templates/header')
 
 @section('content')
+<link rel="stylesheet" href="../../plugins/sweetalert2-theme-bootstrap-4/bootstrap-4.min.css">
 @if(session()->has('success'))
-<div>
+<script src="../../plugins/sweetalert2/sweetalert2.min.js"></script>
+<script>
 
+ $(function() {
+    var Toast = Swal.mixin({
+      toast: true,
+      position: 'top-end',
+      showConfirmButton: false,
+      timer: 3000
+    });
 
-</div>
+    $('.swalDefaultSuccess').click(function() {
+      Toast.fire({
+        icon: 'success',
+        title: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr.'
+      })
+    });
+
+</script>
 @endif
 <!-- general form elements -->
 <div class="card card-primary">
@@ -28,7 +44,7 @@
         <!-- /.card-body -->
 
         <div class="card-footer">
-            <button type="submit"  class="btn btn-primary">Submit</button>
+            <button type="submit"  class="btn btn-primary swalDefaultSuccess">Submit</button>
         </div>
     </form>
 </div>
