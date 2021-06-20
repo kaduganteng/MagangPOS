@@ -13,7 +13,7 @@ class DataAdminController extends Controller
         $adm = User::all();
 
         return view('admin.dataadmin', [
-            'user' => $adm
+            'adm' => $adm
 
 
 

@@ -65,7 +65,7 @@ Swal.fire(
                         <option value="{{$u->nippos}}">{{$u->nippos}} - {{$u->name}}</option>
                         @endforeach
                     </select>
-                </div>  
+                </div>
                 <div class="form-group">
                     <label for="exampleInputPassword1">Surat Peminjaman</label>
                     <input type="file" class="form-control" name="suratpinjam" id="suratpinjam" placeholder="Masukan NIPPOS anda">

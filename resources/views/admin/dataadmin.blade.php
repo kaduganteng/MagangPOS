@@ -35,7 +35,24 @@
         <!-- /.card-header -->
         <div class="card-body">
 
+        <div class="card-body">
+      <table id="example1" class="table table-bordered table-striped">
+        <thead style="text-align-center">
+        @php
+          $no = 1;
+          @endphp
+          @foreach($adm as $a )
+         
+       <h2>Nama = {{$a->name}}</h2>
+       <h2>Email = {{$a->email}}</h2>
+       <h2>Nippos = {{$a->nippos}}</h2>
+       <h2>No Telepon = {{$a->no_telepon}}</h2>
+       <h2>Jabatan = {{$a->jabatan}}</h2> 
 
+       @endforeach
+        </thead>
+      
+    </div>
             <!-- /.card-body -->
         </div>
         <!-- /.card -->

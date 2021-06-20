@@ -60,8 +60,8 @@
   @stack('style')
 @section('content')
 <div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-8">
+    <div class="row justify-content-center; background-color:transparent">
+        <div class="col-md-12">
             <div class="card">
                 <div class="card-header" style="text-align: center;background-color:transparent">{{ __('DASHBOARD PEMINJAMAN') }}</div>
 
@@ -70,16 +70,16 @@
                 <!-- Content Header (Page header) -->
                 <section class="content-header">
                     <div class="container-fluid">
-                        <div class="row mb-2">
+                        <div class="row mb-9">
                             <div class="col-sm-12">
-                                <h1 style="text-align: center;" style="font-family: Verdana, Geneva, Tahoma, sans-serif;">Data Perangkat Yang Disediakan </h1>
+                                <h1 style="text-align: center; background-color:transparent" style="font-family: Verdana, Geneva, Tahoma, sans-serif;">Data Perangkat Yang Disediakan </h1>
                             </div>
-                            <div class="col-lg-3 col-6">
+                            <div class="col-lg-9 col-12">
                
                            
                             
-                            <div class="col-sm-6">
-                                <ol class="breadcrumb float-sm-right">
+                            <div class="col-sm-12">
+                                <ol class="breadcrumb float-sm-center">
 
                                 </ol>
                             </div>
@@ -95,7 +95,7 @@
                             
                             <div class="col-lg-4 col-6  " >
                                 <!-- smal   l box -->
-                                <div class="small-box bg-info">
+                                <div class="small-box bg-info" style="text-align:center;">
                                     <div class="inner">
                                     <img src="{{asset('image/laptop.png')}}" alt="sasa" width="200" height="150">
             
