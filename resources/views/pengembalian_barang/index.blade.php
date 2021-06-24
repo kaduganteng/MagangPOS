@@ -81,9 +81,29 @@
             <td id="nippos"></td>
           </tr>
           <tr>
+            <td>Nama Peminjam</td>
+            <td>:</td>
+            <td id="name"></td>
+          </tr>
+          <tr>
             <td>Barang yang dipinjam</td>
             <td>:</td>
             <td id="nama_barang"></td>
+          </tr>
+          <tr>
+            <td>Serial Nomber</td>
+            <td>:</td>
+            <td id="sn"></td>
+          </tr>
+          <tr>
+            <td>Merk</td>
+            <td>:</td>
+            <td id="merk"></td>
+          </tr>
+          <tr>
+            <td>Kelengkapan</td>
+            <td>:</td>
+            <td id="kelengkapan"></td>
           </tr>
           <tr>
             <td>Tanggal Pinjam</td>
@@ -106,9 +126,13 @@
 
 @section('script')
 <script>
-  function detail(nippos, nama, tgl_peminjaman) {
+  function detail(nippos, name, nama, sn, merk, kelengkapan, tgl_peminjaman) {
     $('#nippos').html(nippos)
-    $('#nama_barang').html(nama)
+    $('#name').html(name)
+    $('#nama_barang').html(name)
+    $('#sn').html(sn)
+    $('#merk').html(merk)
+    $('#kelengkapan').html(kelengkapan)
     $('#tgl_pinjam').html(tgl_peminjaman)
   }
 </script>

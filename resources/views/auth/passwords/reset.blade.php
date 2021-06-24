@@ -1,10 +1,27 @@
 @extends('layouts.app')
+<style>
+    body {
+        background: url('image/hui.jpg');
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+        color: #fff;
+        font-family: comic sans-serif;
+    }
 
+    .text-black {
+        color: black;
+    }
+
+    .text-white {
+        color: white;
+    }
+</style>
 @section('content')
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
-            <div class="card">
+            <div class="card text-white" style="background-color: transparent;border-color:transparent">
                 <div class="card-header">{{ __('Reset Passwordnyax') }}</div>
 
                 <div class="card-body">

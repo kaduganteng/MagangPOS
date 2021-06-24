@@ -14,4 +14,5 @@ class pemasangan extends Model
         'alamat',
         'status'
     ];
+
 }

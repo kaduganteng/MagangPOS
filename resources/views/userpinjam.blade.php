@@ -45,7 +45,7 @@ Swal.fire(
             @csrf
             <div class="card-body">
                 <div class="form-group">
-                    <label for="exampleInputEmail1">Inventory</label>
+                    <label for="exampleInputEmail1">Nama Barang</label>
                     <select class="form-control select2" name="inv_id">
                         @foreach($inventory as $p)
                         <option value="{{$p->id}}">{{$p->nama}}</option>

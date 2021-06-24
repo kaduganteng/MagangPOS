@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use App\Peminjaman;
 use App\Inventory;
 use App\Pengembalian;
-use Illuminate\Http\Request;
+use Illuminate\Http\Request;        
 
 class PengembalianBarangController extends Controller
 {

@@ -2,11 +2,12 @@
 <style>
     html,
     body {
-        background: url('image/popo.jpg');
+        background: url('image/a.jpg');
         background-repeat: no-repeat;
         background-attachment: fixed;
         background-size: cover;
         color: #fff;
+        
         font-family: Verdana, Geneva, Tahoma, sans-serif;
         ;
     }
@@ -48,10 +49,65 @@
         text-decoration: none;
         text-transform: uppercase;
     }
+    .transparent-bgopc{
+        padding: 20px;
+        text-align: center;
+        font-size: 26px;
+        opacity: 0.6;
+}
 
     .m-b-md {
         margin-bottom: 30px;
     }
+    .section {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+  background-color:transparent;
+  }
+
+  .card {
+    background-color:transparent;
+    width: 100%;
+    height: auto;
+    grid-column: span 8;
+    margin: 10px 0;
+    border-radius: 15px;
+    position: relative;
+    box-shadow: 0 10px 10px rgba(0,0,0,.1);
+    margin-top: 20px;
+  }
+
+  .container-card {
+    padding: 0;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(8,1fr);
+    margin: 5px 15px;
+    gap:20px;
+    position: relative;
+  }
+  .card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+  }
+  .body-card {
+    padding: 300px 15px;
+  }
+  .body-card h1 {
+    margin: 0;	
+  
+  }
+  h1 {font: 30px impact, sans-serif;}
+p {
+    font-family: Georgia, serif;
+    font-weight: bold;
+    color: blue;
+    font-style: italic;
+    font-size: 20px;
+}
+
+  
 
     
 </style>
@@ -59,20 +115,24 @@
 <link rel="stylesheet" href="{{ asset('assets') }}/dist/css/adminlte.min.css">
   @stack('style')
 @section('content')
+
 <div class="container">
     <div class="row justify-content-center; background-color:transparent">
         <div class="col-md-12">
-            <div class="card">
-                <div class="card-header" style="text-align: center;background-color:transparent">{{ __('DASHBOARD PEMINJAMAN') }}</div>
+            <div>
+            
+                <b><div class="card-header" style="text-align: center;background-color:white">{{ __('DASHBOARD PEMINJAMAN') }}</div></b>
 
 
 
                 <!-- Content Header (Page header) -->
+                
                 <section class="content-header">
+               
                     <div class="container-fluid">
                         <div class="row mb-9">
-                            <div class="col-sm-12">
-                                <h1 style="text-align: center; background-color:transparent" style="font-family: Verdana, Geneva, Tahoma, sans-serif;">Data Perangkat Yang Disediakan </h1>
+                            <div class="col-md-12">
+                            <h1 class="card-header" style="text-align: center; background-color:white" style="font: brewmaster;">Data Perangkat Yang Disediakan </h1>
                             </div>
                             <div class="col-lg-9 col-12">
                
@@ -84,107 +144,98 @@
                                 </ol>
                             </div>
                         </div>
+                        </div>
                     </div><!-- /.container-fluid -->
                 </section>
 
                 <!-- Main content -->
+               
                 <section class="content">
-
-                    <div class="container-fluid"  >
-                        <div class="row-center">
-                            
-                            <div class="col-lg-4 col-6  " >
-                                <!-- smal   l box -->
-                                <div class="small-box bg-info" style="text-align:center;">
-                                    <div class="inner">
-                                    <img src="{{asset('image/laptop.png')}}" alt="sasa" width="200" height="150">
-            
-                                       <p>Laptop</p>
-                                    </div>
-                                    <div class="icon">
-                                        <i class="ion ion-clipboard"></i>
-                                    </div>
-                                    <a href="{{route('userpinjam')}}"  class="small-box-footer">Pinjam Barang <i class="fas fa-arrow-circle-right"></i></a>
-                                </div>
-                                <div class="small-box bg-info">
-                                    <div class="inner">
-                                    <img src="{{asset('image/note.png')}}" alt="sasa" width="200" height="150">
-            
-                                       <p>Notebook</p>
-                                    </div>
-                                    <div class="icon">
-                                        <i class="ion ion-clipboard"></i>
-                                    </div>
-                                    <a href="{{route('userpinjam')}}"  class="small-box-footer">Pinjam Barang <i class="fas fa-arrow-circle-right"></i></a>
-                                </div>
+              
+                <div class="container-fluid"  >
+                    <div class="row">
+                         <div class="col-md-4">
+                            <div class="card">
+                              <div class="small-box bg-info">
+                                <img src="{{asset('image/laptop.png')}}" alt="sasa" width="200" height="150">
+                                 </div>
+                                    <div class="card-body">
                                 
-                                <div class="small-box bg-info">
-                                    <div class="inner">
-                                    <img src="{{asset('image/dekstop.png')}}" alt="sasa" width="200" height="150">
-            
-                                       <p>Dekstop</p>
+                                    <h5 class="card-title">Laptop</h5>
+                                    <p class="card-text"></p>
+                                    <a href="{{route('userpinjam')}}"  class="btn btn-primary">Pinjam Barang <i class="fas fa-arrow-circle-right"></i></a>
                                     </div>
-                                    <div class="icon">
-                                        <i class="ion ion-clipboard"></i>
-                                    </div>
-                                    <a href="{{route('userpinjam')}}"  class="small-box-footer">Pinjam Barang <i class="fas fa-arrow-circle-right"></i></a>
-                                </div>
-                                <div class="small-box bg-info">
-                                    <div class="inner">
-                                    <img src="{{asset('image/printer.png')}}" alt="sasa" width="200" height="150">
-            
-                                       <p>Printer</p>
-                                    </div>
-                                    <div class="icon">
-                                        <i class="ion ion-clipboard"></i>
-                                    </div>
-                                    <a href="{{route('userpinjam')}}"  class="small-box-footer">Pinjam Barang <i class="fas fa-arrow-circle-right"></i></a>
-                                </div>
-                                <div class="small-box bg-info">
-                                    <div class="inner">
-                                    <img src="{{asset('image/kamera.png')}}" alt="sasa" width="200" height="150">
-            
-                                       <p>Kamera</p>
-                                    </div>
-                                    <div class="icon">
-                                        <i class="ion ion-clipboard"></i>
-                                    </div>
-                                    <a href="{{route('userpinjam')}}"  class="small-box-footer">Pinjam Barang <i class="fas fa-arrow-circle-right"></i></a>
-                                </div>
-                                <div class="small-box bg-info">
-                                    <div class="inner">
-                                    <img src="{{asset('image/scan.png')}}" alt="sasa" width="200" height="150">
-            
-                                       <p>Scanner</p>
-                                    </div>
-                                    <div class="icon">
-                                        <i class="ion ion-clipboard"></i>
-                                    </div>
-                                    <a href="{{route('userpinjam')}}"  class="small-box-footer">Pinjam Barang <i class="fas fa-arrow-circle-right"></i></a>
-                                </div>
-                                <div class="small-box bg-info">
-                                    <div class="inner">
-                                    <img src="{{asset('image/webcam.png')}}" alt="sasa" width="200" height="150">
-            
-                                       <p>WebCam</p>
-                                    </div>
-                                    <div class="icon">
-                                        <i class="ion ion-clipboard"></i>
-                                    </div>
-                                    <a href="{{route('userpinjam')}}"  class="small-box-footer">Pinjam Barang <i class="fas fa-arrow-circle-right"></i></a>
-                                </div>
-
-                            </div>
-                            
-                            <!-- ./col -->
+                                </div>  
                         </div>
-                    </div>
+                        <div class="col-md-4">
+                            <div class="card">
+                            <div class="small-box bg-info">
+                            <img src="{{asset('image/note.png')}}" alt="sasa" width="200" height="150">
+                            </div>
+                                <div class="card-body">
+                                    <h5 class="card-title" style="text-align: center;">Notebook</h5>
+                                    <p class="card-text"></p>
+                                         <a href="{{route('userpinjam')}}"  class="btn btn-primary">Pinjam Barang <i class="fas fa-arrow-circle-right"></i></a>
+                                    </div>
+                                </div>  
+                        </div>
+                        <div class="col-md-4">
+                            <div class="card">
+                            <div class="small-box bg-info">
+                            <img src="{{asset('image/pc.png')}}" alt="sasa" width="200" height="150">
+                            </div>
+                                <div class="card-body">
+                                    <h5 class="card-title">Dekstop</h5>
+                                    <p class="card-text"></p>
+                                    <a href="{{route('userpinjam')}}"  class="btn btn-primary">Pinjam Barang <i class="fas fa-arrow-circle-right"></i></a>
+                                    </div>
+                                </div>  
+                            </div>
+                        <div class="col-md-4">
+                            <div class="card">
+                            <div class="small-box bg-info">
+                            <img src="{{asset('image/printer.png')}}" alt="sasa" width="200" height="150">
+                            </div>
+                                <div class="card-body">
+                                    <h5 class="card-title">Printer</h5>
+                                    <p class="card-text"></p>
+                                    <a href="{{route('userpinjam')}}"  class="btn btn-primary">Pinjam Barang <i class="fas fa-arrow-circle-right"></i></a>
+                                    </div>
+                                </div>  
+                            </div>
+                        <div class="col-md-4">
+                            <div class="card">
+                            <div class="small-box bg-info">
+                            <img src="{{asset('image/kamera.png')}}" alt="sasa" width="200" height="150">
+                            </div>
+                                <div class="card-body">
+                                    <h5 class="card-title">Kamera</h5>
+                                    <p class="card-text"></p>
+                                    <a href="{{route('userpinjam')}}"  class="btn btn-primary">Pinjam Barang <i class="fas fa-arrow-circle-right"></i></a>
+                                </div>
 
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                            <div class="card">
+                            <div class="small-box bg-info">
+                            <img src="{{asset('image/scanner.png')}}" alt="sasa" width="200" height="150">
+                            </div>
+                                <div class="card-body">
+                                    <h5 class="card-title">Scanner</h5>
+                                    <p class="card-text"></p>
+                                    <a href="{{route('userpinjam')}}"  class="btn btn-primary">Pinjam Barang <i class="fas fa-arrow-circle-right"></i></a>
+                                </div>
+
+                                    </div>
+                                </div>  
+                              
+                            </div>
+                    </div>             
                 </section>
                 <!-- /.content -->
-
+                  
                 
-                 
 
                 </a>
 

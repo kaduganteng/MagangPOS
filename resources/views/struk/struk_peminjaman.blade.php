@@ -14,8 +14,9 @@
 	</style>
 	<center>
 		<h5>Struk Peminjaman</h4>
-
+<p>NO : ................................... </p>
 	</center>
+	<p>Pada Hari ini : ..............................., Tanggal : {{$data['tanggal_pinjam']}}</p>
 
 	<table class='table table-bordered'>
 		<thead>
@@ -23,6 +24,7 @@
 				<th>No</th>
 				<th>Nippos</th>
 				<th>Tanggal Pinjam</th>
+				<th>Keterangan</th>
 			</tr>
 		</thead>
 		<tbody>
@@ -32,12 +34,34 @@
 				<td>{{$data['nip']}}</td>
 				<td>{{$data['tanggal_pinjam']}}</td>
 
-			</tr>
-
-		
+			</tr>		
 		</tbody>
 	</table>
+	<p>Status Asset:</p>
+	<p>Asset tercatat sebagai asset :...................................................... </p>
+	<p>Kepada (Pengguna)</p>
+	<p>Nama			:	</p>
+	<p>NIPPOS		:	</p>
+	<p>JABATAN  	:..................</p>
+	<p>UNIT KERJA	:..................</p>
+	<p>DIVISI		:..................</p>
+	<p>SUBDIT		:..................</p>
+	<p>Untuk pemenuhan permintaan :............................................................(Jabatan peminta)</p>
+	<p>Dengan menunjuk surat :{{$data['suratpinjam']}}</p>
+
+
+	<center>
+	<table>
+	<th>
+	<td>
+	<p>Mengetahui</p>
+	<p>Man Infrastruktur</p>
 	
+	</td>
+	
+	</th>
+	</table>
+	</center>
 </body>
 
 </html>

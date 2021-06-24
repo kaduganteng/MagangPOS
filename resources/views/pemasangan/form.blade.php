@@ -25,7 +25,7 @@
                 <label for="exampleInputEmail1">ID Barang</label>
                 <select name="idbarang">
                     @foreach($pemasangan as $p)
-                    <option value="{{$p ->id}}">{{$p->nama}}</option>
+                    <option value="{{$p->id}}">{{$p->nama}}</option>
                     @endforeach
                 </select>
             </div>
