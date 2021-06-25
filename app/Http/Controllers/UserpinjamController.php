@@ -9,14 +9,22 @@ use Illuminate\Http\Request;
 use App\Mail\UserPeminjamanEmail;
 use Illuminate\Support\Facades\Mail;
 use PDF;
+use App\KategoriInventory;
+
 
 class UserpinjamController extends Controller
 
 {
-    public function index()
+    public function index($kategori)
     {
+        $kategori = KategoriInventory::where('nama_kategori', $kategori)->first();
 
-        $inventory = Inventory::where('status', 'ada')->get();
+        $inventory = Inventory::where([
+            ['status', 'ada'],
+            ['kategori_id',$kategori->id]
+        ])->get();
+
+        
         $user = User::all();
         return view('userpinjam', [
             'inventory' => $inventory,
@@ -27,6 +35,7 @@ class UserpinjamController extends Controller
     }
     public function store(Request $request)
     {
+        // return $request->all();
         $this->validate($request, [
             'suratpinjam' => 'required'
         ]);
@@ -44,13 +53,16 @@ class UserpinjamController extends Controller
             'surat_peminjaman' => $tujuan_upload . $nama_file
 
         ]);
+        $inv = Inventory::findOrFail($request->inv_id);
 
-        $status = Inventory::findOrFail($request->inv_id)->update([
+        $status = $inv->update([
             'status' => 'tidak'
         ]);
+
+        $user = User::where('nippos',$request->nip)->first();
        // Mail::to("hudanur0509@gmail.com")->send(new UserPeminjamanEmail());
       //  return view('struk.struk_peminjaman',['data'=>$request->all()]);
-        $pdf = PDF::loadview('struk.struk_peminjaman', ['data' => $request->all()]);
+        $pdf = PDF::loadview('struk.struk_peminjaman', ['data' => $request->all(),'user' => $user,'inv' => $inv]);
         return $pdf->download('struk-peminjaman-pdf.pdf');
     }
 }

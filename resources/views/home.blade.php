@@ -2,11 +2,10 @@
 <style>
     html,
     body {
-        background: url('image/a.jpg');
-        background-repeat: no-repeat;
-        background-attachment: fixed;
-        background-size: cover;
-        color: #fff;
+  
+  background-color: white; /* For browsers that do not support gradients */
+  background-image: linear-gradient(180deg, white, orange);
+
         
         font-family: Verdana, Geneva, Tahoma, sans-serif;
         ;
@@ -121,8 +120,7 @@ p {
         <div class="col-md-12">
             <div>
             
-                <b><div class="card-header" style="text-align: center;background-color:white">{{ __('DASHBOARD PEMINJAMAN') }}</div></b>
-
+               
 
 
                 <!-- Content Header (Page header) -->
@@ -161,9 +159,9 @@ p {
                                  </div>
                                     <div class="card-body">
                                 
-                                    <h5 class="card-title">Laptop</h5>
+                                    <h5 class="card-title "><center>Laptop</center></h5>
                                     <p class="card-text"></p>
-                                    <a href="{{route('userpinjam')}}"  class="btn btn-primary">Pinjam Barang <i class="fas fa-arrow-circle-right"></i></a>
+                                    <a href="{{route('userpinjam','laptop')}}"  class="btn btn-primary">Pinjam Barang <i class="fas fa-arrow-circle-right"></i></a>
                                     </div>
                                 </div>  
                         </div>
@@ -175,7 +173,7 @@ p {
                                 <div class="card-body">
                                     <h5 class="card-title" style="text-align: center;">Notebook</h5>
                                     <p class="card-text"></p>
-                                         <a href="{{route('userpinjam')}}"  class="btn btn-primary">Pinjam Barang <i class="fas fa-arrow-circle-right"></i></a>
+                                         <a href="{{route('userpinjam','notebook')}}"  class="btn btn-primary">Pinjam Barang <i class="fas fa-arrow-circle-right"></i></a>
                                     </div>
                                 </div>  
                         </div>
@@ -185,9 +183,9 @@ p {
                             <img src="{{asset('image/pc.png')}}" alt="sasa" width="200" height="150">
                             </div>
                                 <div class="card-body">
-                                    <h5 class="card-title">Dekstop</h5>
+                                    <h5 class="card-title">Desktop</h5>
                                     <p class="card-text"></p>
-                                    <a href="{{route('userpinjam')}}"  class="btn btn-primary">Pinjam Barang <i class="fas fa-arrow-circle-right"></i></a>
+                                    <a href="{{route('userpinjam','desktop')}}"  class="btn btn-primary">Pinjam Barang <i class="fas fa-arrow-circle-right"></i></a>
                                     </div>
                                 </div>  
                             </div>
@@ -199,7 +197,7 @@ p {
                                 <div class="card-body">
                                     <h5 class="card-title">Printer</h5>
                                     <p class="card-text"></p>
-                                    <a href="{{route('userpinjam')}}"  class="btn btn-primary">Pinjam Barang <i class="fas fa-arrow-circle-right"></i></a>
+                                    <a href="{{route('userpinjam','printer')}}"  class="btn btn-primary">Pinjam Barang <i class="fas fa-arrow-circle-right"></i></a>
                                     </div>
                                 </div>  
                             </div>
@@ -211,7 +209,7 @@ p {
                                 <div class="card-body">
                                     <h5 class="card-title">Kamera</h5>
                                     <p class="card-text"></p>
-                                    <a href="{{route('userpinjam')}}"  class="btn btn-primary">Pinjam Barang <i class="fas fa-arrow-circle-right"></i></a>
+                                    <a href="{{route('userpinjam','kamera')}}"  class="btn btn-primary">Pinjam Barang <i class="fas fa-arrow-circle-right"></i></a>
                                 </div>
 
                                     </div>
@@ -224,7 +222,7 @@ p {
                                 <div class="card-body">
                                     <h5 class="card-title">Scanner</h5>
                                     <p class="card-text"></p>
-                                    <a href="{{route('userpinjam')}}"  class="btn btn-primary">Pinjam Barang <i class="fas fa-arrow-circle-right"></i></a>
+                                    <a href="{{route('userpinjam','scanner')}}"  class="btn btn-primary">Pinjam Barang <i class="fas fa-arrow-circle-right"></i></a>
                                 </div>
 
                                     </div>

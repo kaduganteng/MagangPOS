@@ -69,6 +69,6 @@ Route::group(['prefix' => 'admin'], function () {
     });
 });
 //user
-        Route::get('/userpinjam/create', 'UserpinjamController@index')->name('userpinjam');
+        Route::get('/userpinjam/create/{kategori}', 'UserpinjamController@index')->name('userpinjam');
         Route::post('/peminjaman/store', 'UserpinjamController@store')->name('peminjaman.store');
         Route::get('/home', 'HomeController@index')->name('home');
