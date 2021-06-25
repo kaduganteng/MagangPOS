@@ -24,7 +24,7 @@ class PeminjamanController extends Controller
     {
         $inv = Inventory::where('status', 'ada')->get();
         $user = User::all();
-        
+
         return view('peminjaman/form', [
             'peminjaman' => $inv,
             'user' => $user
@@ -54,12 +54,23 @@ class PeminjamanController extends Controller
 
 
 
+
         $status = Inventory::findOrFail($request->inv_id)->update([
             'status' => 'tidak'
         ]);
 
 
 
+        return redirect()->back()->with('success', 'Berhasil di Input');
+    }
+
+    public function acc(Request $request, $id)
+    {
+        Peminjaman::findOrFail($id)->update([
+            'tgl_pengembalian' => $request->tanggal_pengembalian
+
+
+        ]);
         return redirect()->back()->with('success', 'Berhasil di Input');
     }
 }

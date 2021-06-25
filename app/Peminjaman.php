@@ -12,6 +12,7 @@ class Peminjaman extends Model
         'nippos',
         'tgl_peminjaman',
         'surat_peminjaman',
-        'status'
+        'status',
+        'tgl_pengembalian'
     ];
 }

@@ -105,7 +105,12 @@ p {
     font-style: italic;
     font-size: 20px;
 }
+.title {
+    font-family: roboto;
+    text-align: center;
+    color:orange;
 
+}
   
 
     
@@ -127,10 +132,10 @@ p {
                 
                 <section class="content-header">
                
-                    <div class="container-fluid">
+                    <div class="container-fluid ">
                         <div class="row mb-9">
                             <div class="col-md-12">
-                            <h1 class="card-header" style="text-align: center; background-color:white" style="font: brewmaster;">Data Perangkat Yang Disediakan </h1>
+                            <h1  class="title card-header" style="text-align: center; background-color:white" style="font:face  ;">Data Perangkat Yang Disediakan </h1>
                             </div>
                             <div class="col-lg-9 col-12">
                
@@ -154,7 +159,7 @@ p {
                     <div class="row">
                          <div class="col-md-4">
                             <div class="card">
-                              <div class="small-box bg-info">
+                              <div class="small-box bg-orange">
                                 <img src="{{asset('image/laptop.png')}}" alt="sasa" width="200" height="150">
                                  </div>
                                     <div class="card-body">
@@ -167,11 +172,11 @@ p {
                         </div>
                         <div class="col-md-4">
                             <div class="card">
-                            <div class="small-box bg-info">
+                            <div class="small-box bg-orange">
                             <img src="{{asset('image/note.png')}}" alt="sasa" width="200" height="150">
                             </div>
                                 <div class="card-body">
-                                    <h5 class="card-title" style="text-align: center;">Notebook</h5>
+                                   <h5 class="card-title" style="text-align: center;">Notebook</h5>
                                     <p class="card-text"></p>
                                          <a href="{{route('userpinjam','notebook')}}"  class="btn btn-primary">Pinjam Barang <i class="fas fa-arrow-circle-right"></i></a>
                                     </div>
@@ -179,7 +184,7 @@ p {
                         </div>
                         <div class="col-md-4">
                             <div class="card">
-                            <div class="small-box bg-info">
+                            <div class="small-box bg-orange">
                             <img src="{{asset('image/pc.png')}}" alt="sasa" width="200" height="150">
                             </div>
                                 <div class="card-body">
@@ -191,7 +196,7 @@ p {
                             </div>
                         <div class="col-md-4">
                             <div class="card">
-                            <div class="small-box bg-info">
+                            <div class="small-box bg-orange">
                             <img src="{{asset('image/printer.png')}}" alt="sasa" width="200" height="150">
                             </div>
                                 <div class="card-body">
@@ -203,7 +208,7 @@ p {
                             </div>
                         <div class="col-md-4">
                             <div class="card">
-                            <div class="small-box bg-info">
+                            <div class="small-box bg-orange">
                             <img src="{{asset('image/kamera.png')}}" alt="sasa" width="200" height="150">
                             </div>
                                 <div class="card-body">
@@ -216,7 +221,7 @@ p {
                                 </div>
                                 <div class="col-md-4">
                             <div class="card">
-                            <div class="small-box bg-info">
+                            <div class="small-box bg-orange">
                             <img src="{{asset('image/scanner.png')}}" alt="sasa" width="200" height="150">
                             </div>
                                 <div class="card-body">

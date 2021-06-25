@@ -5,15 +5,17 @@ namespace App\Http\Controllers;
 use App\Peminjaman;
 use App\Inventory;
 use App\Pengembalian;
-use Illuminate\Http\Request;        
+use Illuminate\Http\Request;
+
 
 class PengembalianBarangController extends Controller
 {
     public function index()
     {
-        $peminjaman = Inventory::select('inventory.nama', 'peminjaman.*', 'pengembalian.tgl_pengembalian')
+        $peminjaman = Inventory::select('users.name','inventory.*', 'peminjaman.*', 'pengembalian.tgl_pengembalian')
             ->join('peminjaman', 'peminjaman.inv_id', '=', 'inventory.id')
             ->join('pengembalian', 'pengembalian.peminjaman_id', '=', 'peminjaman.id')
+            ->join('users','peminjaman.nippos','=','users.nippos')
             ->get();
 
         return view('pengembalian_barang.index', [

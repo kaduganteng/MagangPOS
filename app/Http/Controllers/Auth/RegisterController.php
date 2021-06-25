@@ -71,7 +71,11 @@ class RegisterController extends Controller
             'nippos' => $data['nippos'],
             'role_id' => 2,
             'no_telepon'=> $data['no_telepon'],
-            'jabatan'=> $data['jabatan']
+            'jabatan'=> $data['jabatan'],
+            'bagian'=> $data['bagian'],
+            'divisi'=> $data['divisi'],
+            'direktorat'=> $data['direktorat']
+
         ]);
     }
 }

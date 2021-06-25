@@ -62,7 +62,7 @@ class UserpinjamController extends Controller
         $user = User::where('nippos',$request->nip)->first();
        // Mail::to("hudanur0509@gmail.com")->send(new UserPeminjamanEmail());
       //  return view('struk.struk_peminjaman',['data'=>$request->all()]);
-        $pdf = PDF::loadview('struk.struk_peminjaman', ['data' => $request->all(),'user' => $user,'inv' => $inv]);
-        return $pdf->download('struk-peminjaman-pdf.pdf');
+       // $pdf = PDF::loadview('struk.struk_peminjaman', ['data' => $request->all(),'user' => $user,'inv' => $inv]);
+       // return $pdf->download('struk-peminjaman-pdf.pdf');
     }
 }
