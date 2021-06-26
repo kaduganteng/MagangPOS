@@ -35,19 +35,26 @@
         <!-- /.card-header -->
         <div class="card-body">
 
-        <div class="card-body">
-      <table id="example1" class="table table-bordered table-striped">
-        <thead style="text-align-center">
-         
-       <h2>Nama = {{$adm['name']}}</h2>
-       <h2>Email = {{$adm['email']}}</h2>
-       <h2>Nippos = {{$adm['nippos']}}</h2>
-       <h2>No Telepon = {{$adm['no_telepon']}}</h2>
-       <h2>Jabatan = {{$adm['jabatan']}}</h2> 
+            <div class="card-body">
+                <table id="example1" class="table table-bordered table-striped">
+                    <thead style="text-align-center">
+                        <center>
 
-        </thead>
-      
-    </div>
+
+                            <h2>Nama = {{$adm['name']}}</h2>
+                            <h2>Email = {{$adm['email']}}</h2>
+                            <h2>Nippos = {{$adm['nippos']}}</h2>
+                            <h2>No Telepon = {{$adm['no_telepon']}}</h2>
+                            <h2>Jabatan = {{$adm['jabatan']}}</h2>
+                            <h2>Bagian = {{$adm['bagian']}}</h2>
+                            <h2>Divisi = {{$adm['divisi']}}</h2>
+
+
+
+                        </center>
+                    </thead>
+
+            </div>
             <!-- /.card-body -->
         </div>
         <!-- /.card -->
