@@ -3,9 +3,12 @@
 namespace App\Http\Controllers;
 
 use App\Inventory;
+use App\Notifications\NotifikasiAcc;
 use App\Peminjaman;
 use App\User;
 use Illuminate\Http\Request;
+use PDF;
+use Notification;
 
 class PeminjamanController extends Controller
 {
@@ -66,11 +69,20 @@ class PeminjamanController extends Controller
 
     public function acc(Request $request, $id)
     {
-        Peminjaman::findOrFail($id)->update([
+        $peminjaman = Peminjaman::findOrFail($id);
+        $user = User::where('nippos', $peminjaman->nippos)->first();
+        $inv = Inventory::findOrFail($peminjaman->inv_id);
+        $peminjaman->update([
             'tgl_pengembalian' => $request->tanggal_pengembalian
 
 
         ]);
+        $pdf = PDF::loadview('struk.struk_peminjaman', ['data' => $peminjaman, 'user' => $user, 'inv' => $inv]);
+        $report_name = "Bukti Peminjaman Barang";
+        $tanggal_pengembalian = $request->tanggal_pengembalian;
+
+        Notification::route("mail", $user->email)->notify(new NotifikasiAcc($pdf, $report_name, $tanggal_pengembalian));
+
         return redirect()->back()->with('success', 'Berhasil di Input');
     }
 }
