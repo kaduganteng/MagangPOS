@@ -4,11 +4,11 @@
 <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 @if(session()->has('success'))
 <script>
-Swal.fire(
-  'Done!',
-  'Data Anda berhasil Dihapus',
-  'success'
-)
+    Swal.fire(
+        'Done!',
+        'Data Anda berhasil Ditambahkan',
+        'success'
+    )
 </script>
 @endif
 <!-- general form elements -->
@@ -32,9 +32,9 @@ Swal.fire(
         <!-- /.card-body -->
 
         <div class="card-footer">
-        <div id=" swalDefaultSuccess">
-            <button type="submit"  class="btn btn-primary">Submit</button>
-        </div>
+            <div id=" swalDefaultSuccess">
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </div>
         </div>
     </form>
 </div>

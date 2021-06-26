@@ -5,11 +5,11 @@
 <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 @if(session()->has('success'))
 <script>
-Swal.fire(
-  'Done!',
-  'Data Anda berhasil Dihapus',
-  'success'
-)
+  Swal.fire(
+    'Done!',
+    'Data Anda berhasil Diubah',
+    'success'
+  )
 </script>
 @endif
 <!-- Content Header (Page header) -->
@@ -69,8 +69,8 @@ Swal.fire(
             <td>{!!$i->kelengkapan!!}</td>
             <td>{{$i->tgl_masuk}}</td>
             <td>
-              <a href="{{route('inventory.destroy',$i->id)}}"><button class="btn btn-danger" >DELETE</button></a>
-              <a href="{{route('inventory.edit',$i->id)}}"><button class="btn btn-success"  >UPDATE</button></a>
+              <a href="{{route('inventory.destroy',$i->id)}}"><button class="btn btn-danger">DELETE</button></a>
+              <a href="{{route('inventory.edit',$i->id)}}"><button class="btn btn-success">UPDATE</button></a>
 
 
 

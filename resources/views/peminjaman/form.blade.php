@@ -4,11 +4,11 @@
 <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 @if(session()->has('success'))
 <script>
-Swal.fire(
-  'Done!',
-  'Data Anda berhasil Ditambahkan',
-  'success'
-)
+    Swal.fire(
+        'Done!',
+        'Data Anda berhasil Diinput',
+        'success'
+    )
 </script>
 @endif
 <!-- general form elements -->
