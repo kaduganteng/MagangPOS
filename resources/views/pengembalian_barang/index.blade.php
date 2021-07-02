@@ -48,7 +48,7 @@
           <tr>
             <td>{{$no++}}</td>
             <td>{{$p->tgl_pengembalian}}</td>
-            <td> <button type="button" onClick="detail('{{$p->nippos}}','{{$p->name}}','{{$p->nama}}','{{$p->sn}}','{{$p->merk}}','{{$p->kelengkapan}}','{{$p->tgl_peminjaman}}')" class="btn btn-secondary" data-toggle="modal" data-target="#modal-secondary">
+            <td> <button type="button" onClick="detail('{{$p->nippos}}','{{$p->name}}','{{$p->nama}}','{{$p->sn}}','{{$p->merk}}','{{$p->tgl_peminjaman}}')" class="btn btn-secondary" data-toggle="modal" data-target="#modal-secondary">
                 Detail
               </button></td>
 
@@ -100,11 +100,7 @@
             <td>:</td>
             <td id="merk"></td>
           </tr>
-          <tr>
-            <td>Kelengkapan</td>
-            <td>:</td>
-            <td id="kelengkapan"></td>
-          </tr>
+
           <tr>
             <td>Tanggal Pinjam</td>
             <td>:</td>
@@ -126,13 +122,12 @@
 
 @section('script')
 <script>
-  function detail(nippos, name, nama, sn, merk, keterangan, tgl_peminjaman) {
+  function detail(nippos, name, nama, sn, merk, tgl_peminjaman) {
     $('#nippos').html(nippos)
     $('#name').html(name)
     $('#nama_barang').html(nama)
     $('#sn').html(sn)
     $('#merk').html(merk)
-    $('#kelengkapan').html(keterangan)
     $('#tgl_pinjam').html(tgl_peminjaman)
   }
 </script>

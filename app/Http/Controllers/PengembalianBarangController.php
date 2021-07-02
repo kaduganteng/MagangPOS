@@ -12,10 +12,10 @@ class PengembalianBarangController extends Controller
 {
     public function index()
     {
-        $peminjaman = Inventory::select('users.name','inventory.*', 'peminjaman.*', 'pengembalian.tgl_pengembalian')
+        $peminjaman = Inventory::select('users.name', 'inventory.*', 'peminjaman.*', 'pengembalian.tgl_pengembalian')
             ->join('peminjaman', 'peminjaman.inv_id', '=', 'inventory.id')
             ->join('pengembalian', 'pengembalian.peminjaman_id', '=', 'peminjaman.id')
-            ->join('users','peminjaman.nippos','=','users.nippos')
+            ->join('users', 'peminjaman.nippos', '=', 'users.nippos')
             ->get();
 
         return view('pengembalian_barang.index', [
@@ -24,7 +24,7 @@ class PengembalianBarangController extends Controller
     }
     public function create()
     {
-        $pinjam = Inventory::select('inventory.nama', 'peminjaman.*')
+        $pinjam = Inventory::select('inventory.sn', 'peminjaman.*')
             ->join('peminjaman', 'peminjaman.inv_id', '=', 'inventory.id')
             ->where('peminjaman.status', 'belum dikembalikan')
             ->get();

@@ -105,14 +105,14 @@
     }
 
     h1 {
-        font: 30px impact, sans-serif;
+        font: 50px impact, sans-serif;
     }
 
     p {
         font-family: Georgia, serif;
         font-weight: bold;
-        color: blue;
-        font-style: italic;
+        color: black;
+        font-style: arial;
         font-size: 20px;
     }
 
@@ -143,20 +143,19 @@
                     <div class="container-fluid ">
                         <div class="row mb-9">
                             <div class="col-md-12">
-                                <h1 class="title card-header" style="text-align: center; background-color:white" style="font:face  ;">Data Perangkat Yang Disediakan </h1>
-                            </div>
-                            <div class="col-lg-9 col-12">
+                                <h1 class="title card-header bg-dark" class="card-title" style="text-align: center;">PERANGKAT YANG TERSEDIA</h1>
+                                <div class="col-lg-9 col-12">
 
 
 
-                                <div class="col-sm-12">
-                                    <ol class="breadcrumb float-sm-center">
+                                    <div class="col-sm-12">
+                                        <ol class="breadcrumb float-sm-center">
 
-                                    </ol>
+                                        </ol>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                    </div><!-- /.container-fluid -->
+                        </div><!-- /.container-fluid -->
                 </section>
 
                 <!-- Main content -->
@@ -171,10 +170,9 @@
                                         <img src="{{asset('image/flat laptop.jpg')}}" alt="sasa" width="200" height="150">
                                     </div>
                                     <div class="card-body">
-
-                                        <h5 class="card-title ">
-                                            <center>Laptop</center>
-                                        </h5>
+                                        <p -align="center">
+                                            <front color="black"><b>LAPTOP</b></front><br />
+                                        </p>
                                         <p class="card-text"></p>
                                         <a href="{{route('userpinjam','laptop')}}" class="btn btn-primary">Pinjam Barang <i class="fas fa-arrow-circle-right"></i></a>
                                     </div>
@@ -186,7 +184,9 @@
                                         <img src="{{asset('image/flat note.jpg')}}" alt="sasa" width="200" height="150">
                                     </div>
                                     <div class="card-body">
-                                        <h5 class="card-title" style="text-align: center;">Notebook</h5>
+                                        <p -align="center">
+                                            <front color="black"><b>NOTEBOOK</b></front><br />
+                                        </p>
                                         <p class="card-text"></p>
                                         <a href="{{route('userpinjam','notebook')}}" class="btn btn-primary">Pinjam Barang <i class="fas fa-arrow-circle-right"></i></a>
                                     </div>
@@ -198,7 +198,7 @@
                                         <img src="{{asset('image/flat pc.jpg')}}" alt="sasa" width="200" height="150">
                                     </div>
                                     <div class="card-body">
-                                        <h5 class="card-title">Desktop</h5>
+                                        <p color="black"><b>DEKSTOP</b></front><br /></p>
                                         <p class="card-text"></p>
                                         <a href="{{route('userpinjam','desktop')}}" class="btn btn-primary">Pinjam Barang <i class="fas fa-arrow-circle-right"></i></a>
                                     </div>
@@ -210,7 +210,9 @@
                                         <img src="{{asset('image/flat printer.jpg')}}" alt="sasa" width="200" height="150">
                                     </div>
                                     <div class="card-body">
-                                        <h5 class="card-title">Printer</h5>
+                                        <p -align="center">
+                                            <front color="black"><b>PRINTER</b></front><br />
+                                        </p>
                                         <p class="card-text"></p>
                                         <a href="{{route('userpinjam','printer')}}" class="btn btn-primary">Pinjam Barang <i class="fas fa-arrow-circle-right"></i></a>
                                     </div>
@@ -222,7 +224,7 @@
                                         <img src="{{asset('image/flat camera.jpg')}}" alt="sasa" width="200" height="150">
                                     </div>
                                     <div class="card-body">
-                                        <h5 class="card-title">Kamera</h5>
+                                        <p <front color="black"><b>KAMERA</b></front><br /></p>
                                         <p class="card-text"></p>
                                         <a href="{{route('userpinjam','kamera')}}" class="btn btn-primary">Pinjam Barang <i class="fas fa-arrow-circle-right"></i></a>
                                     </div>
@@ -235,7 +237,9 @@
                                         <img src="{{asset('image/flat scanner.jpg')}}" alt="sasa" width="200" height="150">
                                     </div>
                                     <div class="card-body">
-                                        <h5 class="card-title">Scanner</h5>
+                                        <p -align="center">
+                                            <front color="black"><b>SCANER</b></front><br />
+                                        </p>
                                         <p class="card-text"></p>
                                         <a href="{{route('userpinjam','scanner')}}" class="btn btn-primary">Pinjam Barang <i class="fas fa-arrow-circle-right"></i></a>
                                     </div>
