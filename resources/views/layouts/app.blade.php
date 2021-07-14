@@ -32,7 +32,10 @@
     <div id="app">
         @auth
         <nav class="navbar navbar-expand-lg navbar-dark teal mb-4">
-            <a class="navbar-brand" href="#">POS Inventory</a>
+            <a href="/home" class="brand-link">
+                <img src="{{ asset('image/logo.png') }}" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
+                <span style="color:white;" class="brand-text font-weight-light">{{config('app.name')}}</span>
+            </a>
 
 
             </a>

@@ -38,20 +38,20 @@
             <div class="card-body">
                 <table id="example1" class="table table-bordered table-striped">
                     <thead style="text-align-center">
-                        <center>
-
-
-                            <h2>Nama = {{$adm['name']}}</h2>
-                            <h2>Email = {{$adm['email']}}</h2>
-                            <h2>Nippos = {{$adm['nippos']}}</h2>
-                            <h2>No Telepon = {{$adm['no_telepon']}}</h2>
-                            <h2>Jabatan = {{$adm['jabatan']}}</h2>
-                            <h2>Bagian = {{$adm['bagian']}}</h2>
-                            <h2>Divisi = {{$adm['divisi']}}</h2>
 
 
 
-                        </center>
+                        <h2>Nama = {{$adm['name']}}</h2>
+                        <h2>Email = {{$adm['email']}}</h2>
+                        <h2>Nippos = {{$adm['nippos']}}</h2>
+                        <h2>No Telepon = {{$adm['no_telepon']}}</h2>
+                        <h2>Jabatan = {{$adm['jabatan']}}</h2>
+                        <h2>Bagian = {{$adm['bagian']}}</h2>
+                        <h2>Divisi = {{$adm['divisi']}}</h2>
+
+
+
+
                     </thead>
 
             </div>

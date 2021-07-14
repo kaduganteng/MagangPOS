@@ -22,7 +22,7 @@
 
 
 <body class="hold-transition sidebar-mini">
-<div class="preloader flex-column justify-content-center align-items-center">
+  <div class="preloader flex-column justify-content-center align-items-center">
     <img class="animation__shake" src="{{asset('image/logo.png')}}" alt="AdminLTELogo" height=100px width="">
   </div>
   <!-- Site wrapper -->
@@ -36,7 +36,7 @@
           <a class="nav-link" data-widget="pushmenu" href="#" role="button" style="color:white;"><i class="fas fa-bars"></i></a>
         </li>
         <li class="nav-item d-none d-sm-inline-block">
-          <a href="/home" class="nav-link" style="color:white;">Home</a>
+          <a href="/home" class="nav-link" style="color:white;">Home PUser</a>
         </li>
 
         </li>
@@ -100,7 +100,7 @@
                with font-awesome or any other icon font library -->
             <li class="nav-item">
               <a href="{{route('dashboard')}}" style="color:white;" class="nav-link">
-                <i class="fa fa-tachometer-alt"></i>  
+                <i class="fa fa-tachometer-alt"></i>
                 <p>
                   &nbsp;Dashboard
                 </p>

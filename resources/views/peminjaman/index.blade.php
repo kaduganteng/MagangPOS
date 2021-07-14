@@ -87,7 +87,7 @@
                 <div class="modal-body">
                     <label for="tanggal_pengembalian">Tanggal Pengembalian</label>
                     <input type="date" name="tanggal_pengembalian">
-
+                    <p>*Isi jika barang yang di pinjam bukan aset</p>
                 </div>
                 <div class="modal-footer justify-content-between">
 

@@ -143,7 +143,7 @@
                     <div class="container-fluid ">
                         <div class="row mb-9">
                             <div class="col-md-12">
-                                <h1 class="title card-header bg-dark" class="card-title" style="text-align: center;">PERANGKAT YANG TERSEDIA</h1>
+                                <h1 class="title card-header bg-dark" class="card-title" style="text-align: center;">FORM PEMINJAMAN PERANGKAT</h1>
                                 <div class="col-lg-9 col-12">
 
 
@@ -175,20 +175,6 @@
                                         </p>
                                         <p class="card-text"></p>
                                         <a href="{{route('userpinjam','laptop')}}" class="btn btn-primary">Pinjam Barang <i class="fas fa-arrow-circle-right"></i></a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-4">
-                                <div class="card">
-                                    <div class="small-box bg-orange">
-                                        <img src="{{asset('image/flat note.jpg')}}" alt="sasa" width="200" height="150">
-                                    </div>
-                                    <div class="card-body">
-                                        <p -align="center">
-                                            <front color="black"><b>NOTEBOOK</b></front><br />
-                                        </p>
-                                        <p class="card-text"></p>
-                                        <a href="{{route('userpinjam','notebook')}}" class="btn btn-primary">Pinjam Barang <i class="fas fa-arrow-circle-right"></i></a>
                                     </div>
                                 </div>
                             </div>

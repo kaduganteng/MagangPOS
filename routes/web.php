@@ -69,6 +69,8 @@ Route::group(['middleware' => 'isAdmin'], function () {
                 Route::post('/pengajuan/store', 'PengajuanController@store')->name('pengajuan.store');
                 Route::get('/dataadmin', 'DataAdminController@index')->name('dataadmin');
         });
+
+        Route::get('/pilihan/pilihanpinjam', 'PilihanPinjamController@index')->name('pilihanpinjam');
 });
 //user
 Route::get('/userpinjam/create/{kategori}', 'UserpinjamController@index')->name('userpinjam');
