@@ -152,7 +152,7 @@
 <script>
     Swal.fire(
         'Done!',
-        'Data Anda berhasil Dihapus',
+        'Data Anda berhasil Diinput',
         'success'
     )
 </script>
@@ -202,14 +202,10 @@
             <div class="card-footer" style="text-align: center;">
                 <button type="submit" class="btn btn-primary" style="background-color: black;border-color:blanchedalmond">SUBMIT</button>
 
+                <a href="{{ route('home') }}" class="btn btn-primary" style="background-color: black;border-color:blanchedalmond"> Kembali</a>
             </div>
-            <div class="col-md-8 offset-md-4">
 
-                <a class="btn btn-link text-white" href="{{ route('home') }}">
-                    {{ __('Kembali') }}
-                </a>
 
-            </div>
         </form>
     </div>
 

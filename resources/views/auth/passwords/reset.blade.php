@@ -8,6 +8,7 @@
         color: #fff;
         font-family: comic sans-serif;
     }
+    
 
     .text-black {
         color: black;

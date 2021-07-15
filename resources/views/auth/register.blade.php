@@ -167,14 +167,17 @@
                                 </button>
 
 
+                                <a href="{{route('login')}}">
+                                    <button type="submit" class="btn btn-primary" style="background-color: transparent;border-color:white;">
+                                        {{ __('Kembali') }}
+                                    </button>
+
+                                </a>
                             </div>
 
                         </div>
                     </form>
-                    <a href="{{route('login')}}">
-                        <button class="btn btn-link">Kembali</button>
 
-                    </a>
                 </div>
             </div>
         </div>

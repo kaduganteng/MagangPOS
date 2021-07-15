@@ -32,11 +32,11 @@
     <div id="app">
         @auth
         <nav class="navbar navbar-expand-lg navbar-dark teal mb-4">
+
             <a href="/home" class="brand-link">
                 <img src="{{ asset('image/logo.png') }}" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
                 <span style="color:white;" class="brand-text font-weight-light">{{config('app.name')}}</span>
             </a>
-
 
             </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">

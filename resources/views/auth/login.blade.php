@@ -3,7 +3,7 @@
 
 <style>
     body {
-    background: url('image/huhuhu.jpg');
+        background: url('image/huhuhu.jpg');
         background-repeat: no-repeat;
         background-attachment: fixed;
         background-size: cover;
@@ -20,18 +20,25 @@
         color: white;
     }
 
-        .loader {
-    border: 16px solid #f3f3f3; /* Light grey */
-    border-top: 16px solid #3498db; /* Blue */
-    border-radius: 50%;
-    width: 120px;
-    height: 120px;
-    animation: spin 2s linear infinite;
+    .loader {
+        border: 16px solid #f3f3f3;
+        /* Light grey */
+        border-top: 16px solid #3498db;
+        /* Blue */
+        border-radius: 50%;
+        width: 120px;
+        height: 120px;
+        animation: spin 2s linear infinite;
     }
 
     @keyframes spin {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
+        0% {
+            transform: rotate(0deg);
+        }
+
+        100% {
+            transform: rotate(360deg);
+        }
     }
 </style>
 
@@ -89,15 +96,16 @@
                                     {{ __('Lupa Password?klik disini') }}
                                 </a>
                                 @endif
-                            </div>
-                            <div class="col-md-8 offset-md-4">
-
                                 <a class="btn btn-link text-white " href="{{ route('register') }}">
                                     {{ __('Belum punya akun? Register') }}
                                 </a>
 
+
                             </div>
+
+
                         </div>
+
 
                 </div>
 
