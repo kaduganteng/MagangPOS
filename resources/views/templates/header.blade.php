@@ -99,7 +99,7 @@
             <!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->
             <li class="nav-item">
-              <a href="{{route('dashboard')}}" style="color:white;" class="nav-link">
+              <a href="{{route('dashboard')}}" style="color:white;" class="nav-link ">
                 <i class="fa fa-tachometer-alt"></i>
                 <p>
                   &nbsp;Dashboard
