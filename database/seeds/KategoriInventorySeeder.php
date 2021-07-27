@@ -13,19 +13,18 @@ class KategoriInventorySeeder extends Seeder
     public function run()
     {
         $kategori =
-        [
-            'laptop',
-            'dekstop',
-            'notebook',
-            'printer',
-            'kamera',
-            'webcam',
-            'scanner'
+            [
+                'laptop',
+                'dekstop',
+                'printer',
+                'webcam',
+                'scanner',
+                'bukanaset'
 
-        ];
-        foreach ($kategori as $k){
+            ];
+        foreach ($kategori as $k) {
             KategoriInventory::insert([
-                'nama_kategori' => $k 
+                'nama_kategori' => $k
             ]);
         }
     }

@@ -1,30 +1,29 @@
 @extends('layouts.app')
+@section('style')
 <style>
-    body {
-        background: url('image/hui.jpg');
-        background-repeat: no-repeat;
-        background-attachment: fixed;
-        background-size: cover;
-        color: #fff;
-        font-family: comic sans-serif;
+    .btn-regis {
+        background-color: transparent;
+        border-color: white;
     }
 
-    .text-black {
+    .btn-regis:hover {
+        background-color: white;
         color: black;
-    }
-
-    .text-white {
-        color: white;
     }
 </style>
 
+@endsection
 @section('content')
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
-            <div class="card text-white" style="background-color: transparent;border-color:transparent">
-                <div class="card-header text-white" style=";text-align: center;">
-                    <img src="{{asset('image/akupos.png')}}" alt="" width="300" height="200">
+            <div class="card text-white bg-dark">
+                <div class="card-header text-white" style="text-align: center;">
+                    <p>____________________________________________________________________________</p>
+
+                    <h1> {{(' REGISTER')}}</h1>
+                    <p>isi form berikut dengan data yang benar</p>
+                    <p>____________________________________________________________________________</p>
 
                 </div>
 
@@ -161,24 +160,18 @@
                         </div>
 
                         <div class="form-group row mb-0">
-                            <div class="col-md-6 offset-md-5">
-                                <button type="submit" class="btn btn-primary" style="background-color: transparent;border-color:white;">
+                            <div class="col-md-6 offset-md-4    ">
+                                <button type="submit" class="btn btn-primary btn-block btn-regis  ">
                                     {{ __('REGISTER') }}
                                 </button>
-
-
-                                <a href="{{route('login')}}">
-                                    <button type="submit" class="btn btn-primary" style="background-color: transparent;border-color:white;">
-                                        {{ __('Kembali') }}
-                                    </button>
-
-                                </a>
                             </div>
 
                         </div>
+
                     </form>
 
                 </div>
+                <p style="text-align: center;">____________________________________________________________________________</p>
             </div>
         </div>
     </div>

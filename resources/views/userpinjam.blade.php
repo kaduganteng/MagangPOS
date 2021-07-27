@@ -14,13 +14,13 @@
     }
 
     .text-white {
-        color: white;
+        color: black;
     }
 
     html,
     body {
 
-        background-color: white;
+        background-color: black;
         /* For browsers that do not support gradients */
 
 
@@ -124,7 +124,7 @@
     h1 {
         font-family: Georgia, serif;
         font-weight: bold;
-        color: white;
+        color: black;
         font-style: serif;
         font-size: 20px;
     }
@@ -132,7 +132,7 @@
     p {
         font-family: Georgia, serif;
         font-weight: bold;
-        color: white;
+        color: black;
         font-style: arial;
         font-size: 20px;
     }
@@ -200,7 +200,7 @@
             <!-- /.card-body -->
 
             <div class="card-footer" style="text-align: center;">
-                <button type="submit" class="btn btn-primary" style="background-color: black;border-color:blanchedalmond">SUBMIT</button>
+                <button href="" type="submit" class="btn btn-primary" style="background-color: black;border-color:blanchedalmond">SUBMIT</button>
 
                 <a href="{{ route('home') }}" class="btn btn-primary" style="background-color: black;border-color:blanchedalmond"> Kembali</a>
             </div>

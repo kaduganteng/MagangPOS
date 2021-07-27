@@ -19,10 +19,10 @@ class AdminSeeder extends Seeder
             'email' => 'rayhanjundi77@gmail.com',
             'nippos' => '1234',
             'password' => Hash::make('anaksholeh'),
-            'jabatan'=>'Admin',
-            'bagian'=>'Admin',
-            'divisi'=>'IT',
-            'no_telepon'=> '085888250528',
+            'jabatan' => 'Admin',
+            'bagian' => 'Admin',
+            'divisi' => 'IT',
+            'no_telepon' => '085888250528',
             'role_id' => 1
 
         ]);
@@ -32,10 +32,10 @@ class AdminSeeder extends Seeder
             'email' => 'hudanur0509@gmail.com',
             'nippos' => '1233',
             'password' => Hash::make('warnuy123'),
-            'jabatan'=>'Admin',
-            'bagian'=>'Admin',
-            'divisi'=>'IT',
-            'no_telepon'=>'082210905501',
+            'jabatan' => 'Admin',
+            'bagian' => 'Admin',
+            'divisi' => 'IT',
+            'no_telepon' => '082210905501',
             'role_id' => 1
 
         ]);

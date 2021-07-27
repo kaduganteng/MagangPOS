@@ -17,7 +17,13 @@
   <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
   <link rel="shortcut icon" href="{{asset('image/pos.png')}}" type="image/x-icon">
   <link rel="stylesheet" href="../../plugins/sweetalert2-theme-bootstrap-4/bootstrap-4.min.css">
-
+  <style>
+    .nav-pills .nav-link.active,
+    .nav-pills .show>.nav-link {
+      color: #fff;
+      background-color: gray;
+    }
+  </style>
 </head>
 
 
@@ -50,6 +56,10 @@
           </a>
 
           <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();">
+              {{ __('Logout') }}
+            </a>
             <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
               {{ __('Logout') }}
@@ -89,7 +99,7 @@
             <img src="{{ asset('image/admina.png') }}" class="img-circle elevation-2" alt="User Image">
           </div>
           <div class="info">
-            <a href="dataadmin" class="d-block text-white">{{Auth::user()->name}}</a>
+            <a href="dataadmin" class="d-block text-white {{(Request::is('admin/dashboard') || Request::is('admin/dashboard/*') ? 'active' : '')}}">{{Auth::user()->name}}</a>
           </div>
         </div>
         <hr style="background-color: white;">
@@ -99,7 +109,7 @@
             <!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->
             <li class="nav-item">
-              <a href="{{route('dashboard')}}" style="color:white;" class="nav-link ">
+              <a href="{{route('dashboard')}}" style="color:white;" class="nav-link {{(Request::is('admin/dashboard') || Request::is('admin/dashboard/*') ? 'active' : '')}}">
                 <i class="fa fa-tachometer-alt"></i>
                 <p>
                   &nbsp;Dashboard
@@ -107,7 +117,7 @@
               </a>
             </li>
             <li class="nav-item">
-              <a href="{{route('inventory')}}" style="color:white;" class="nav-link">
+              <a href="{{route('inventory')}}" style="color:white;" class="nav-link {{(Request::is('admin/inventory') || Request::is('admin/inventory/*') ? 'active' : '')}}">
                 <i class="fa fa-archive"></i>
                 <p>
                   &nbsp; Inventori
@@ -115,7 +125,7 @@
               </a>
             </li>
             <li class="nav-item">
-              <a href="{{route('kategori_inventory')}}" style="color:white;" class="nav-link">
+              <a href="{{route('kategori_inventory')}}" style="color:white;" class="nav-link {{(Request::is('admin/kategoriInventory') || Request::is('admin/kategoriInventory/*') ? 'active' : '')}}">
                 <i class="fa fa-bars"></i>
                 <p>
                   &nbsp; Kategori Inventori
@@ -123,7 +133,7 @@
               </a>
             </li>
             <li class="nav-item">
-              <a href="{{route('peminjaman.index')}}" style="color:white;" class="nav-link">
+              <a href="{{route('peminjaman.index')}}" style="color:white;" class="nav-link {{(Request::is('admin/peminjaman') || Request::is('admin/peminjaman') ? 'active' : '')}} ">
                 <i class="fa fa-upload"></i>
                 <p>
                   &nbsp; Peminjaman
@@ -131,7 +141,7 @@
               </a>
             </li>
             <li class="nav-item">
-              <a href="{{route('PengembalianBarang.index')}}" style="color:white;" class="nav-link">
+              <a href="{{route('PengembalianBarang.index')}}" style="color:white;" class="nav-link {{(Request::is('admin/pengembalian_barang') || Request::is('admin/pengembalian_barang/*') ? 'active' : '')}}">
                 <i class="fa fa-download"></i>
                 <p>
                   &nbsp; Pengembalian
@@ -139,7 +149,7 @@
               </a>
             </li>
             <li class="nav-item">
-              <a href="{{route('pemasangan.index')}}" style="color:white;" class="nav-link">
+              <a href="{{route('pemasangan.index')}}" style="color:white;" class="nav-link {{(Request::is('admin/pemasangan') || Request::is('admin/pemasangan/*') ? 'active' : '')}}">
                 <i class="fa fa-camera"></i>
                 <p>
                   &nbsp; Pemasangan WebCam

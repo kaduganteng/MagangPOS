@@ -1,4 +1,4 @@
-@extends('templates/header')
+@extends('layouts.app')
 
 @section('content')
 
@@ -15,7 +15,7 @@
     <div class="container-fluid">
 
         <div class="col-md-12" style="text-align: center;">
-            <h1>Biodata Admin</h1>
+            <h1>BIODATA USER</h1>
         </div>
 
 
@@ -28,9 +28,7 @@
     <!-- Default box -->
     <div class="card">
         <div class="card-header">
-            <div class="image" style="text-align: center;">
-                <img src="{{ asset('image/admina.png') }}" class="img-circle elevation-2" alt="User Image" width="100" height="100">
-            </div>
+
         </div>
         <!-- /.card-header -->
         <div class="card-body">

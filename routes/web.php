@@ -76,3 +76,4 @@ Route::group(['middleware' => 'isAdmin'], function () {
 Route::get('/userpinjam/create/{kategori}', 'UserpinjamController@index')->name('userpinjam');
 Route::post('/peminjaman/store', 'UserpinjamController@store')->name('peminjaman.store');
 Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/datauser', 'DataUserController@index')->name('datauser');

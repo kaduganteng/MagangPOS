@@ -40,6 +40,16 @@
             transform: rotate(360deg);
         }
     }
+
+    .btn-login {
+        background-color: transparent;
+        border-color: white;
+    }
+
+    .btn-login:hover {
+        background-color: white;
+        color: black;
+    }
 </style>
 
 @endsection
@@ -87,18 +97,21 @@
                             </div>
                         </div>
                         <div class="form-group row mb-0">
-                            <div class="col-md-8">
-                                <button type="submit" class="btn btn-primary" style="background-color: transparent;border-color:white">
+                            <div class="col-md-12">
+                                <button type="submit" class="btn btn-primary btn-block btn-login">
                                     {{ __('Login') }}
                                 </button>
-                                @if (Route::has('password.request'))
-                                <a class="btn btn-link text-white" href="{{ route('password.request') }}">
-                                    {{ __('Lupa Password?klik disini') }}
-                                </a>
-                                @endif
-                                <a class="btn btn-link text-white " href="{{ route('register') }}">
-                                    {{ __('Belum punya akun? Register') }}
-                                </a>
+                                <center>
+                                    @if (Route::has('password.request'))
+                                    <a class="btn btn-link text-white" href="{{ route('password.request') }}">
+                                        {{ __('Lupa Password?klik disini') }}
+                                    </a>
+                                    @endif
+                                    <a class="btn btn-link text-white " href="{{ route('register') }}">
+                                        {{ __('Belum punya akun? Register') }}
+                                    </a>
+                                </center>
+
 
 
                             </div>
