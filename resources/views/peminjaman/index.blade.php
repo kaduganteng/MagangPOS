@@ -37,6 +37,7 @@
                         <td>Barang Di Pinjam</td>
                         <td>Tanggal Pinjam</td>
                         <td>Nama Peminjam</td>
+
                         <td>Surat Peminjaman</td>
                         <td>Opsi</td>
                     </tr>
@@ -87,7 +88,7 @@
                 <div class="modal-body">
                     <label for="tanggal_pengembalian">Tanggal Pengembalian</label>
                     <input type="date" name="tanggal_pengembalian">
-                    <p>*Isi jika barang yang di pinjam bukan aset</p>
+                    <p>*Isi tanggal pengembalian jika barang yang di pinjam bukan asset</p>
                 </div>
                 <div class="modal-footer justify-content-between">
 

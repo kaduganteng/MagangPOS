@@ -53,11 +53,6 @@ class PeminjamanController extends Controller
 
         ]);
 
-
-
-
-
-
         $status = Inventory::findOrFail($request->inv_id)->update([
             'status' => 'tidak'
         ]);

@@ -73,6 +73,8 @@
                         <td>{{$adm['divisi']}}</td>
                     </tr>
                 </tbody>
+    
+
             </table>
 
             <!-- /.card-body -->

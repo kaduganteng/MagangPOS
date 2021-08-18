@@ -48,7 +48,7 @@ class NotifikasiAcc extends Notification
     public function toMail($notifiable)
     {
         return (new MailMessage)
-            ->line('Peminjaman anda sudah diacc,harap simpan file pdf ini sebagai bukti peminjaman.')
+            ->line('Peminjaman anda telah disetujui oleh admin, harap simpan file pdf ini sebagai bukti peminjaman.')
             ->line('Batas peminjaman tanggal ' . $this->tanggal_pengembalian)
             ->attachData($this->pdf->output(), $this->report_name . ".pdf")
             ->line('Terima Kasih');

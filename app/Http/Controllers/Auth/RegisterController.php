@@ -70,11 +70,11 @@ class RegisterController extends Controller
             'password' => Hash::make($data['password']),
             'nippos' => $data['nippos'],
             'role_id' => 2,
-            'no_telepon'=> $data['no_telepon'],
-            'jabatan'=> $data['jabatan'],
-            'bagian'=> $data['bagian'],
-            'divisi'=> $data['divisi'],
-            'direktorat'=> $data['direktorat']
+            'no_telepon' => $data['no_telepon'],
+            'jabatan' => $data['jabatan'],
+            'bagian' => $data['bagian'],
+            'divisi' => $data['divisi'],
+            'direktorat' => $data['direktorat']
 
         ]);
     }

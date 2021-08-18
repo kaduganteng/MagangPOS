@@ -23,6 +23,7 @@
         <div class="card-body">
             <div class="form-group">
                 <label for="exampleInputEmail1"></label>
+                <label for="exampleInputFile">Masukan Serial nomer barang</label>
                 <select class="form-control select2" name="peminjaman_id">
                     @foreach($pinjam as $p)
                     <option value="{{$p->id}}">{{$p->sn}}</option>

@@ -1,6 +1,6 @@
 <footer class="main-footer">
 
-  <strong>@copyright2021</strong>
+  <strong>@Copyright2021 PT.Indonesia | AMIK Bandung </strong>
 </footer>
 
 <!-- Control Sidebar -->
