@@ -102,14 +102,11 @@
                                     {{ __('Login') }}
                                 </button>
                                 <center>
-                                    @if (Route::has('password.request'))
+                                
                                     <a class="btn btn-link text-white" href="{{ route('password.request') }}">
                                         {{ __('Lupa Password?klik disini') }}
                                     </a>
-                                    @endif
-                                    <a class="btn btn-link text-white " href="{{ route('register') }}">
-                                        {{ __('Belum punya akun? Register') }}
-                                    </a>
+                                
                                 </center>
 
 
